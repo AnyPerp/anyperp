@@ -53,7 +53,7 @@ const sections: DocSection[] = [
     </>
   },
   {
-    id: "whitepaper", group: "Start here", title: "Whitepaper", summary: "Read the full technical whitepaper in the browser, or download the PDF.",
+    id: "whitepaper", group: "Start here", title: "Whitepaper", summary: "Read the full technical whitepaper here. Download the PDF anytime.",
     content: <>
       <p>
         The <strong>{WHITEPAPER_TITLE}</strong> covers product thesis, isolated market design, oracles,
@@ -61,11 +61,11 @@ const sections: DocSection[] = [
         Unaudited testnet document — not investment advice and not a safety certificate.
       </p>
       <div className="docs-whitepaper-actions">
-        <a className="docs-wp-btn docs-wp-btn-primary" href={WHITEPAPER_PATH} target="_blank" rel="noreferrer">
-          Open whitepaper
-        </a>
-        <a className="docs-wp-btn" href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">
+        <a className="docs-wp-btn docs-wp-btn-primary" href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">
           Download PDF
+        </a>
+        <a className="docs-wp-btn" href={WHITEPAPER_PATH} target="_blank" rel="noreferrer">
+          Open PDF in new tab
         </a>
         <a className="docs-wp-btn docs-wp-btn-ghost" href="#overview">
           Back to overview
@@ -74,7 +74,7 @@ const sections: DocSection[] = [
       <div className="docs-whitepaper-meta">
         <span>Format · PDF</span>
         <span>Version · 0.1.0-testnet</span>
-        <span>Path · <code>{WHITEPAPER_PATH}</code></span>
+        <span>Read below · or download above</span>
       </div>
       <div className="docs-whitepaper-frame-wrap">
         <iframe
@@ -85,10 +85,10 @@ const sections: DocSection[] = [
         />
       </div>
       <p className="docs-whitepaper-fallback">
-        If the preview does not load in your browser, use{" "}
-        <a href={WHITEPAPER_PATH} target="_blank" rel="noreferrer">Open whitepaper</a>
-        {" "}or{" "}
-        <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a>.
+        Prefer offline?{" "}
+        <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download the PDF</a>
+        {" · "}
+        <a href={WHITEPAPER_PATH} target="_blank" rel="noreferrer">Open full screen</a>
       </p>
     </>
   },
