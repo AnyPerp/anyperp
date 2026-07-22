@@ -840,7 +840,13 @@ export default function Home() {
           ? "trade"
           : null;
     if (!target) return;
-    const timer = window.setTimeout(() => setView(target as View), 0);
+    const timer = window.setTimeout(() => {
+      setView(target as View);
+      const id = window.location.hash.replace(/^#/, "");
+      if (id) {
+        window.setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 60);
+      }
+    }, 0);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -861,15 +867,21 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  function openSurface(surface: "landing" | "docs" | "app") {
+  function openSurface(surface: "landing" | "docs" | "app", hash?: string) {
     const configured = surface === "landing" ? process.env.NEXT_PUBLIC_SITE_URL : surface === "docs" ? process.env.NEXT_PUBLIC_DOCS_URL : process.env.NEXT_PUBLIC_APP_URL;
     const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    const fragment = hash ? (hash.startsWith("#") ? hash : `#${hash}`) : "";
     if (configured && !isLocal) {
-      window.location.assign(configured);
+      window.location.assign(`${configured}${fragment}`);
       return;
     }
     setView(surface === "app" ? "trade" : surface);
-    window.history.replaceState({}, "", surface === "landing" ? "/" : `/?surface=${surface}`);
+    window.history.replaceState({}, "", `${surface === "landing" ? "/" : `/?surface=${surface}`}${fragment}`);
+    if (fragment) {
+      window.setTimeout(() => {
+        document.getElementById(fragment.slice(1))?.scrollIntoView({ behavior: "smooth" });
+      }, 80);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -895,7 +907,7 @@ export default function Home() {
           <Image className="brand-mark" src="/logo/anyperp-logo.svg" alt="" width={30} height={30} unoptimized priority /><span>AnyPerp</span>{view === "docs" ? <span className="docs-tag">DOCS</span> : <span className="testnet-tag">TESTNET</span>}
         </button>
         {view === "landing" ? <nav className="desktop-nav landing-nav" aria-label="Landing navigation">
-          <a href="#how-it-works">How it works</a><a href="#architecture">Architecture</a><a href="#risk-boundaries">Risk</a><a href="#deployment">Contracts</a><button type="button" onClick={() => openSurface("docs")}>Docs</button><a href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); openSurface("docs"); window.setTimeout(() => document.getElementById("whitepaper")?.scrollIntoView({ behavior: "smooth" }), 50); }}>Whitepaper</a>
+          <a href="#how-it-works">How it works</a><a href="#architecture">Architecture</a><a href="#risk-boundaries">Risk</a><a href="#deployment">Contracts</a><button type="button" onClick={() => openSurface("docs")}>Docs</button><a href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); openSurface("docs", "whitepaper"); }}>Whitepaper</a>
         </nav> : view === "docs" ? <nav className="desktop-nav" aria-label="Documentation navigation">
           <a href="#overview">Overview</a><a href="#whitepaper">Whitepaper</a><a href="#oracle">Oracles</a><a href="#risk">Risk</a><a href="#contracts">Contracts</a><a href="#api">API</a>
         </nav> : <nav className="desktop-nav app-primary-nav" aria-label="Primary navigation">
@@ -944,7 +956,7 @@ export default function Home() {
           onLaunch={() => openSurface("app")}
           onCreate={() => { setView("create"); window.history.replaceState({}, "", "/?surface=app"); }}
           onRisk={() => setView("risk")}
-          onDocs={() => openSurface("docs")}
+          onDocs={(hash?: string) => openSurface("docs", hash)}
         />
       ) : view === "docs" ? (
         <DocsPortal onHome={() => openSurface("landing")} onLaunch={() => openSurface("app")} />
@@ -1061,7 +1073,7 @@ function LivePositionCard() {
   );
 }
 
-function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onCreate(): void; onRisk(): void; onDocs(): void }) {
+function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onCreate(): void; onRisk(): void; onDocs(hash?: string): void }) {
   const factory = process.env.NEXT_PUBLIC_MARKET_FACTORY_ADDRESS;
   return <div className="landing-main">
     <section className="landing-hero">
@@ -1139,7 +1151,7 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
           <button type="button" className="text-link" onClick={onDocs}>
             Docs &amp; deploy notes <span>→</span>
           </button>
-          <a className="text-link" href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); onDocs(); window.setTimeout(() => document.getElementById("whitepaper")?.scrollIntoView({ behavior: "smooth" }), 50); }}>
+          <a className="text-link" href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); onDocs("whitepaper"); }}>
             Whitepaper <span>→</span>
           </a>
           <a className="text-link" href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">
@@ -1169,7 +1181,7 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
     </section>
 
     <section className="landing-cta"><div><p className="landing-eyebrow">anyperp.fun</p><h2>Any token. A perp.<br />Make the market.</h2></div><div><button className="button cta-light" onClick={onCreate}>Create a market</button><button className="button cta-outline" onClick={onLaunch}>Open the app</button></div></section>
-    <footer className="landing-footer"><div className="footer-brand"><Image className="brand-mark" src="/logo/anyperp-logo.svg" alt="" width={34} height={34} unoptimized /><div><strong>AnyPerp</strong><small>anyperp.fun · {networkMode} · chain {appChain.id}</small></div></div><div><button type="button" onClick={onDocs}>Docs</button><a href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); onDocs(); window.setTimeout(() => document.getElementById("whitepaper")?.scrollIntoView({ behavior: "smooth" }), 50); }}>Whitepaper</a><a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a><button type="button" onClick={onLaunch}>App</button><button type="button" onClick={onRisk}>Risk</button><a href="https://x.com/tradeanyperp" target="_blank" rel="noreferrer">X</a><a href="https://github.com/AnyPerp/anyperp" target="_blank" rel="noreferrer">GitHub</a>{factory && isAddress(factory) && <a href={`${explorerBase}/address/${factory}`} target="_blank" rel="noreferrer">Explorer ↗</a>}</div></footer>
+    <footer className="landing-footer"><div className="footer-brand"><Image className="brand-mark" src="/logo/anyperp-logo.svg" alt="" width={34} height={34} unoptimized /><div><strong>AnyPerp</strong><small>anyperp.fun · {networkMode} · chain {appChain.id}</small></div></div><div><button type="button" onClick={() => onDocs()}>Docs</button><a href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); onDocs("whitepaper"); }}>Whitepaper</a><a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a><button type="button" onClick={onLaunch}>App</button><button type="button" onClick={onRisk}>Risk</button><a href="https://x.com/tradeanyperp" target="_blank" rel="noreferrer">X</a><a href="https://github.com/AnyPerp/anyperp" target="_blank" rel="noreferrer">GitHub</a>{factory && isAddress(factory) && <a href={`${explorerBase}/address/${factory}`} target="_blank" rel="noreferrer">Explorer ↗</a>}</div></footer>
   </div>;
 }
 
