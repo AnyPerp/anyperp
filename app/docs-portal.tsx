@@ -20,6 +20,9 @@ const REGISTRY = process.env.NEXT_PUBLIC_MARKET_REGISTRY_ADDRESS ?? "Not configu
 const ORACLE_ROUTER = process.env.NEXT_PUBLIC_ORACLE_ROUTER_ADDRESS ?? "Not configured";
 const COLLATERAL = process.env.NEXT_PUBLIC_COLLATERAL_ADDRESS ?? "Not configured";
 const EXPLORER = "https://explorer.testnet.chain.robinhood.com/address/";
+/** Static PDF served from public/docs (read in-browser + download). */
+export const WHITEPAPER_PATH = "/docs/AnyPerp-Whitepaper-v0.1.pdf";
+const WHITEPAPER_TITLE = "AnyPerp Technical Whitepaper v0.1.0-testnet";
 
 function AddressRow({ label, address, note }: { label: string; address: string; note: string }) {
   const [copied, setCopied] = useState(false);
@@ -46,6 +49,47 @@ const sections: DocSection[] = [
       <div className="docs-card-grid"><article><b>Traders</b><p>Long or short before a big exchange bothers to list the coin.</p></article><article><b>Token teams</b><p>Help seed a perp without getting a free pass on safety.</p></article><article><b>LPs</b><p>Back one market at a time and always know where capital sits.</p></article></div>
       <h3>Where we are</h3>
       <p>Local lifecycle tests pass. A fresh Robinhood Chain testnet deploy is still required. The old deployer key was disclosed - do not fund or trust that deploy. Production collateral, live feeds, final risk, and mainnet addresses are not set.</p>
+      <p>Prefer the long form? Read the <a href="#whitepaper">technical whitepaper</a> on this site, or <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">download the PDF</a>.</p>
+    </>
+  },
+  {
+    id: "whitepaper", group: "Start here", title: "Whitepaper", summary: "Read the full technical whitepaper in the browser, or download the PDF.",
+    content: <>
+      <p>
+        The <strong>{WHITEPAPER_TITLE}</strong> covers product thesis, isolated market design, oracles,
+        risk tiers, liquidation and funding, contract topology, off-chain stack, and go/no-go gates.
+        Unaudited testnet document — not investment advice and not a safety certificate.
+      </p>
+      <div className="docs-whitepaper-actions">
+        <a className="docs-wp-btn docs-wp-btn-primary" href={WHITEPAPER_PATH} target="_blank" rel="noreferrer">
+          Open whitepaper
+        </a>
+        <a className="docs-wp-btn" href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">
+          Download PDF
+        </a>
+        <a className="docs-wp-btn docs-wp-btn-ghost" href="#overview">
+          Back to overview
+        </a>
+      </div>
+      <div className="docs-whitepaper-meta">
+        <span>Format · PDF</span>
+        <span>Version · 0.1.0-testnet</span>
+        <span>Path · <code>{WHITEPAPER_PATH}</code></span>
+      </div>
+      <div className="docs-whitepaper-frame-wrap">
+        <iframe
+          className="docs-whitepaper-frame"
+          title={WHITEPAPER_TITLE}
+          src={`${WHITEPAPER_PATH}#view=FitH`}
+          loading="lazy"
+        />
+      </div>
+      <p className="docs-whitepaper-fallback">
+        If the preview does not load in your browser, use{" "}
+        <a href={WHITEPAPER_PATH} target="_blank" rel="noreferrer">Open whitepaper</a>
+        {" "}or{" "}
+        <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a>.
+      </p>
     </>
   },
   {
@@ -181,8 +225,14 @@ GET  /v1/transactions/:hash`}</code></pre>
     id: "sources", group: "Reference", title: "Source material", summary: "Primary docs behind our chain and integration assumptions.",
     content: <>
       <p>Last reviewed 2026-07-15. Addresses, feed coverage, pool depth, heartbeats, and live testnet behavior still need deploy-time validation even when a doc claims support.</p>
-      <div className="docs-links"><a href="https://docs.robinhood.com/chain/" target="_blank" rel="noreferrer"><b>Robinhood Chain docs</b><span>Network, wallets, RPC, bridging, AA</span></a><a href="https://docs.chain.link/" target="_blank" rel="noreferrer"><b>Chainlink docs</b><span>Feeds, metadata, sequencer uptime, safety</span></a><a href="https://developers.uniswap.org/docs" target="_blank" rel="noreferrer"><b>Uniswap developer docs</b><span>Pools, oracle observations, integration</span></a><a href="https://explorer.testnet.chain.robinhood.com" target="_blank" rel="noreferrer"><b>Robinhood testnet explorer</b><span>Bytecode, verified source, txs, events</span></a></div>
-      <p>Full spec, decision log, formulas, DDL, threat model, and test plan: <code>docs/ANYPERP_SPEC.md</code> and <code>docs/ANYPERP_PROTOCOL_SPEC.md</code> in the repo.</p>
+      <div className="docs-links">
+        <a href={WHITEPAPER_PATH} target="_blank" rel="noreferrer"><b>AnyPerp whitepaper (PDF)</b><span>Read online or download — protocol, risk, architecture</span></a>
+        <a href="https://docs.robinhood.com/chain/" target="_blank" rel="noreferrer"><b>Robinhood Chain docs</b><span>Network, wallets, RPC, bridging, AA</span></a>
+        <a href="https://docs.chain.link/" target="_blank" rel="noreferrer"><b>Chainlink docs</b><span>Feeds, metadata, sequencer uptime, safety</span></a>
+        <a href="https://developers.uniswap.org/docs" target="_blank" rel="noreferrer"><b>Uniswap developer docs</b><span>Pools, oracle observations, integration</span></a>
+        <a href="https://explorer.testnet.chain.robinhood.com" target="_blank" rel="noreferrer"><b>Robinhood testnet explorer</b><span>Bytecode, verified source, txs, events</span></a>
+        <a href="https://github.com/AnyPerp/anyperp" target="_blank" rel="noreferrer"><b>GitHub monorepo</b><span>Contracts, services, app, deployments</span></a>
+      </div>
     </>
   },
 ];
@@ -202,13 +252,31 @@ export function DocsPortal({ onHome, onLaunch }: DocsPortalProps) {
       <aside className="docs-sidebar">
         <label className="docs-search"><span>Search docs</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Oracle, funding, API..." /></label>
         <nav aria-label="Documentation sections">{groups.map((group) => <div key={group}><p>{group}</p>{sections.filter((section) => section.group === group).map((section) => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}</div>)}</nav>
-        <div className="docs-sidebar-actions"><button onClick={onHome}>Back home</button><button onClick={onLaunch}>Open the app</button></div>
+        <div className="docs-sidebar-actions">
+          <a href="#whitepaper">Whitepaper</a>
+          <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a>
+          <button type="button" onClick={onHome}>Back home</button>
+          <button type="button" onClick={onLaunch}>Open the app</button>
+        </div>
       </aside>
       <article className="docs-article">
-        <header className="docs-hero"><p className="landing-eyebrow">AnyPerp docs · anyperp.fun</p><h1>Know the rules. Then trade them.</h1><p>Start simple. Go deeper when you need price feeds, risk rails, LP vaults, contracts, or the API.</p><div><span>VERSION 0.1.0</span><span>TESTNET</span><span>anyperp.fun</span></div></header>
+        <header className="docs-hero"><p className="landing-eyebrow">AnyPerp docs · anyperp.fun</p><h1>Know the rules. Then trade them.</h1><p>Start simple. Go deeper when you need price feeds, risk rails, LP vaults, contracts, the whitepaper, or the API.</p><div><span>VERSION 0.1.0</span><span>TESTNET</span><span>WHITEPAPER</span><span>anyperp.fun</span></div></header>
         {visible.length ? visible.map((section) => <section className="docs-section" id={section.id} key={section.id}><div className="docs-section-head"><p>{section.group}</p><h2>{section.title}</h2><span>{section.summary}</span></div><div className="docs-body">{section.content}</div></section>) : <div className="docs-no-results"><strong>Nothing matches "{query}"</strong><p>Try oracle, risk, funding, contracts, or API.</p></div>}
       </article>
-      <aside className="docs-rail"><div><p>ON THIS PAGE</p>{visible.slice(0, 8).map((section) => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}</div><div className="docs-status"><span className="status-dot" /><div><strong>Testnet deployed</strong><small>Chain 46630 · factory live</small></div></div><div className="docs-rail-card"><span>Architecture</span><strong>Oracle-priced<br />isolated vaults</strong><small>Not a CLOB. Not a vAMM.</small></div></aside>
+      <aside className="docs-rail">
+        <div><p>ON THIS PAGE</p>{visible.slice(0, 8).map((section) => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}</div>
+        <div className="docs-status"><span className="status-dot" /><div><strong>Testnet deployed</strong><small>Chain 46630 · factory live</small></div></div>
+        <div className="docs-rail-card docs-rail-whitepaper">
+          <span>Whitepaper</span>
+          <strong>Technical PDF<br />v0.1.0-testnet</strong>
+          <small>Read on-site or download.</small>
+          <div className="docs-rail-wp-actions">
+            <a href="#whitepaper">Read here</a>
+            <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download</a>
+          </div>
+        </div>
+        <div className="docs-rail-card"><span>Architecture</span><strong>Oracle-priced<br />isolated vaults</strong><small>Not a CLOB. Not a vAMM.</small></div>
+      </aside>
     </div>
   </div>;
 }

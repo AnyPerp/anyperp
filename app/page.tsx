@@ -33,7 +33,7 @@ import {
   type Address,
 } from "viem";
 import { marketFactoryAbi, resolveAppChain, resolveFeatureFlags } from "../packages/sdk/src/index";
-import { DocsPortal } from "./docs-portal";
+import { DocsPortal, WHITEPAPER_PATH } from "./docs-portal";
 
 type ListedMarket = {
   symbol: string;
@@ -895,9 +895,9 @@ export default function Home() {
           <Image className="brand-mark" src="/logo/anyperp-logo.svg" alt="" width={30} height={30} unoptimized priority /><span>AnyPerp</span>{view === "docs" ? <span className="docs-tag">DOCS</span> : <span className="testnet-tag">TESTNET</span>}
         </button>
         {view === "landing" ? <nav className="desktop-nav landing-nav" aria-label="Landing navigation">
-          <a href="#how-it-works">How it works</a><a href="#architecture">Architecture</a><a href="#risk-boundaries">Risk</a><a href="#deployment">Contracts</a><button onClick={() => openSurface("docs")}>Docs</button>
+          <a href="#how-it-works">How it works</a><a href="#architecture">Architecture</a><a href="#risk-boundaries">Risk</a><a href="#deployment">Contracts</a><button type="button" onClick={() => openSurface("docs")}>Docs</button><a href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); openSurface("docs"); window.setTimeout(() => document.getElementById("whitepaper")?.scrollIntoView({ behavior: "smooth" }), 50); }}>Whitepaper</a>
         </nav> : view === "docs" ? <nav className="desktop-nav" aria-label="Documentation navigation">
-          <a href="#overview">Overview</a><a href="#oracle">Oracles</a><a href="#risk">Risk</a><a href="#contracts">Contracts</a><a href="#api">API</a>
+          <a href="#overview">Overview</a><a href="#whitepaper">Whitepaper</a><a href="#oracle">Oracles</a><a href="#risk">Risk</a><a href="#contracts">Contracts</a><a href="#api">API</a>
         </nav> : <nav className="desktop-nav app-primary-nav" aria-label="Primary navigation">
           <button type="button" className={view === "markets" ? "nav-active" : ""} onClick={() => go("markets")}>Markets</button>
           <button type="button" className={view === "trade" ? "nav-active" : ""} onClick={() => go("trade")}>Trade</button>
@@ -1135,9 +1135,17 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
           <span>NETWORK</span>
           <strong>{networkLabel} · {appChain.id}</strong>
         </div>
-        <button type="button" className="text-link" onClick={onDocs} style={{ marginTop: 16 }}>
-          Docs &amp; deploy notes <span>→</span>
-        </button>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 16 }}>
+          <button type="button" className="text-link" onClick={onDocs}>
+            Docs &amp; deploy notes <span>→</span>
+          </button>
+          <a className="text-link" href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); onDocs(); window.setTimeout(() => document.getElementById("whitepaper")?.scrollIntoView({ behavior: "smooth" }), 50); }}>
+            Whitepaper <span>→</span>
+          </a>
+          <a className="text-link" href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">
+            Download PDF <span>↓</span>
+          </a>
+        </div>
       </div>
       <div className="contract-proof contract-proof--list" aria-label="Official protocol contracts">
         {OFFICIAL_CONTRACTS.filter((c) => c.address && isAddress(c.address) && !/Demo market/i.test(c.name)).map((c) => (
@@ -1161,7 +1169,7 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
     </section>
 
     <section className="landing-cta"><div><p className="landing-eyebrow">anyperp.fun</p><h2>Any token. A perp.<br />Make the market.</h2></div><div><button className="button cta-light" onClick={onCreate}>Create a market</button><button className="button cta-outline" onClick={onLaunch}>Open the app</button></div></section>
-    <footer className="landing-footer"><div className="footer-brand"><Image className="brand-mark" src="/logo/anyperp-logo.svg" alt="" width={34} height={34} unoptimized /><div><strong>AnyPerp</strong><small>anyperp.fun · {networkMode} · chain {appChain.id}</small></div></div><div><button onClick={onDocs}>Docs</button><button onClick={onLaunch}>App</button><button onClick={onRisk}>Risk</button><a href="https://x.com/tradeanyperp" target="_blank" rel="noreferrer">X</a><a href="https://anyperp.fun" target="_blank" rel="noreferrer">anyperp.fun</a>{factory && isAddress(factory) && <a href={`${explorerBase}/address/${factory}`} target="_blank" rel="noreferrer">Explorer ↗</a>}</div></footer>
+    <footer className="landing-footer"><div className="footer-brand"><Image className="brand-mark" src="/logo/anyperp-logo.svg" alt="" width={34} height={34} unoptimized /><div><strong>AnyPerp</strong><small>anyperp.fun · {networkMode} · chain {appChain.id}</small></div></div><div><button type="button" onClick={onDocs}>Docs</button><a href="/?surface=docs#whitepaper" onClick={(e) => { e.preventDefault(); onDocs(); window.setTimeout(() => document.getElementById("whitepaper")?.scrollIntoView({ behavior: "smooth" }), 50); }}>Whitepaper</a><a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a><button type="button" onClick={onLaunch}>App</button><button type="button" onClick={onRisk}>Risk</button><a href="https://x.com/tradeanyperp" target="_blank" rel="noreferrer">X</a><a href="https://github.com/AnyPerp/anyperp" target="_blank" rel="noreferrer">GitHub</a>{factory && isAddress(factory) && <a href={`${explorerBase}/address/${factory}`} target="_blank" rel="noreferrer">Explorer ↗</a>}</div></footer>
   </div>;
 }
 

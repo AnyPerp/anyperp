@@ -81,7 +81,8 @@
   display: grid;
   gap: 5px;
 }
-.docs-sidebar-actions button {
+.docs-sidebar-actions button,
+.docs-sidebar-actions a {
   text-align: left;
   border: 0;
   background: transparent;
@@ -91,8 +92,116 @@
   font-size: 11px;
   font-weight: 650;
   transition: color 0.18s;
+  text-decoration: none;
+  font-family: inherit;
 }
-.docs-sidebar-actions button:hover { color: #00c805; }
+.docs-sidebar-actions button:hover,
+.docs-sidebar-actions a:hover { color: #00c805; }
+
+/* Whitepaper: read on-site + download */
+.docs-whitepaper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+.docs-wp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #d0d5d0;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.docs-wp-btn:hover {
+  border-color: #b8f0ba;
+  background: #e6f9e7;
+  color: #009604;
+}
+.docs-wp-btn-primary {
+  background: #00c805;
+  border-color: #00c805;
+  color: #041204;
+}
+.docs-wp-btn-primary:hover {
+  background: #00a804;
+  border-color: #00a804;
+  color: #041204;
+}
+.docs-wp-btn-ghost {
+  border-color: transparent;
+  background: transparent;
+  color: #009604;
+}
+.docs-whitepaper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #6a6a6a;
+}
+.docs-whitepaper-meta code {
+  font-size: 11px;
+  color: #3d3d3d;
+  background: #f4f7f4;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.docs-whitepaper-frame-wrap {
+  border: 1px solid #e8ebe8;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f4f7f4;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+.docs-whitepaper-frame {
+  display: block;
+  width: 100%;
+  height: min(78vh, 920px);
+  min-height: 480px;
+  border: 0;
+  background: #fff;
+}
+.docs-whitepaper-fallback {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6a6a6a;
+}
+.docs-whitepaper-fallback a {
+  color: #009604;
+  font-weight: 650;
+  text-decoration: none;
+}
+.docs-whitepaper-fallback a:hover { text-decoration: underline; }
+.docs-rail-whitepaper .docs-rail-wp-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.docs-rail-whitepaper .docs-rail-wp-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 8px 6px;
+  border-radius: 8px;
+  border: 1px solid #d0d5d0;
+  background: #fff;
+  color: #009604;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.docs-rail-whitepaper .docs-rail-wp-actions a:hover {
+  background: #e6f9e7;
+  border-color: #b8f0ba;
+}
 
 .docs-article {
   min-width: 0;
