@@ -20,8 +20,8 @@ const REGISTRY = process.env.NEXT_PUBLIC_MARKET_REGISTRY_ADDRESS ?? "Not configu
 const ORACLE_ROUTER = process.env.NEXT_PUBLIC_ORACLE_ROUTER_ADDRESS ?? "Not configured";
 const COLLATERAL = process.env.NEXT_PUBLIC_COLLATERAL_ADDRESS ?? "Not configured";
 const EXPLORER = "https://explorer.testnet.chain.robinhood.com/address/";
-/** Static PDF served from public/docs (read in-browser + download). */
-export const WHITEPAPER_PATH = "/docs/AnyPerp-Whitepaper-v0.1.pdf";
+/** Static PDF in public/ (anyperp- prefix is allowed by Vercel SPA rewrite). */
+export const WHITEPAPER_PATH = "/anyperp-whitepaper-v0.1.pdf";
 const WHITEPAPER_TITLE = "AnyPerp Technical Whitepaper v0.1.0-testnet";
 
 function AddressRow({ label, address, note }: { label: string; address: string; note: string }) {
