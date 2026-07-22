@@ -114,17 +114,38 @@ GitHub-style credits for people shipping AnyPerp. Avatars link to their GitHub p
 
 <table>
   <tr>
-    <td align="center" width="120">
+    <td align="center" width="140">
       <a href="https://github.com/tradeanyperp">
-        <img src="https://github.com/tradeanyperp.png?size=100" width="64" height="64" alt="tradeanyperp" style="border-radius:50%" /><br />
+        <img src="https://github.com/tradeanyperp.png?size=100" width="64" height="64" alt="tradeanyperp" /><br />
         <b>tradeanyperp</b>
       </a>
       <br /><sub>Protocol · product</sub>
     </td>
+    <td align="center" width="140">
+      <a href="https://github.com/CallMESuper">
+        <img src="https://github.com/CallMESuper.png?size=100" width="64" height="64" alt="CallMESuper" /><br />
+        <b>CallMESuper</b>
+      </a>
+      <br /><sub>Super</sub>
+    </td>
+    <td align="center" width="140">
+      <a href="https://github.com/nmayorga092">
+        <img src="https://github.com/nmayorga092.png?size=100" width="64" height="64" alt="nmayorga092" /><br />
+        <b>nmayorga092</b>
+      </a>
+      <br /><sub>Nicolás</sub>
+    </td>
   </tr>
 </table>
 
-> **Note:** The native GitHub **Contributors** graph (right sidebar) only lists accounts that have **committed code** to this repo. To appear there, open a PR / push as that GitHub user. The table above is the curated project credits list (add more rows anytime).
+<p>
+  <a href="https://github.com/AnyPerp/anyperp/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=AnyPerp/anyperp" alt="Contributors" />
+  </a>
+</p>
+
+> **Note:** The native GitHub **Contributors** sidebar only lists accounts that have **committed code**. The table above is curated project credits.
+
 
 ## Security status
 
