@@ -1,3 +1,22 @@
+<p align="center">
+  <img src="public/github/github-og-light.png" alt="AnyPerp — Any token. A perp. Today." width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://anyperp.fun">Website</a> ·
+  <a href="https://anyperp.fun/?surface=app">App</a> ·
+  <a href="https://anyperp.fun/?surface=docs">Docs</a> ·
+  <a href="https://x.com/tradeanyperp">X</a> ·
+  <a href="https://github.com/AnyPerp">Org</a>
+</p>
+
+<p align="center">
+  <img alt="status" src="https://img.shields.io/badge/status-testnet%20prototype-2d6a4f?style=flat-square" />
+  <img alt="audit" src="https://img.shields.io/badge/audit-unaudited-6c757d?style=flat-square" />
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-0b7285?style=flat-square" />
+  <img alt="chain" src="https://img.shields.io/badge/chain-RHC%20testnet%2046630-1b4332?style=flat-square" />
+</p>
+
 # AnyPerp
 
 Unaudited testnet prototype for permissionless, isolated perpetual markets on Robinhood Chain.
