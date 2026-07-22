@@ -26,34 +26,6 @@ Unaudited testnet prototype for permissionless, isolated perpetual markets on Ro
 
 > **Not affiliated with Robinhood.** Do **not** use with real funds. This software is provided as-is under the MIT License with no warranty.
 
-## Contributors
-
-<table>
-  <tr>
-    <td align="center" width="140">
-      <a href="https://github.com/tradeanyperp">
-        <img src="https://github.com/tradeanyperp.png?size=100" width="72" height="72" alt="tradeanyperp" /><br />
-        <b>tradeanyperp</b>
-      </a>
-      <br /><sub>Protocol · product</sub>
-    </td>
-    <td align="center" width="140">
-      <a href="https://github.com/CallMESuper">
-        <img src="https://github.com/CallMESuper.png?size=100" width="72" height="72" alt="CallMESuper" /><br />
-        <b>CallMESuper</b>
-      </a>
-      <br /><sub>Super</sub>
-    </td>
-    <td align="center" width="140">
-      <a href="https://github.com/nmayorga092">
-        <img src="https://github.com/nmayorga092.png?size=100" width="72" height="72" alt="nmayorga092" /><br />
-        <b>nmayorga092</b>
-      </a>
-      <br /><sub>Nicolás</sub>
-    </td>
-  </tr>
-</table>
-
 ---
 
 ## Deployed contracts (Robinhood Chain testnet `46630`)
