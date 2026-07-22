@@ -28,6 +28,23 @@ Unaudited testnet prototype for permissionless, isolated perpetual markets on Ro
 
 ---
 
+## $PERP community token (Robinhood Mainnet)
+
+| Field | Value |
+|-------|--------|
+| **Name** | AnyPerp |
+| **Ticker** | `$PERP` |
+| **CA** | [`0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049`](https://dexscreener.com/robinhood/0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049) |
+| **Chain** | Robinhood Mainnet |
+| **Allocation** | Team **5%** · Community **95%** |
+| **Investors** | No VC |
+| **Use case** | Community token for the AnyPerp ecosystem — testnet participation, product research, development updates, and community initiatives around isolated perpetual markets |
+| **Website** | [anyperp.fun/#token](https://anyperp.fun/#token) |
+
+Source of truth: [`deployments/perp-token.json`](deployments/perp-token.json). Always verify the CA before interacting.
+
+---
+
 ## Deployed contracts (Robinhood Chain testnet `46630`)
 
 Public addresses from the live AnyPerp testnet suite. **Unaudited.** Verify bytecode on the explorer before integrating. Source of truth: [`deployments/46630-latest.json`](https://github.com/AnyPerp/anyperp/blob/main/deployments/46630-latest.json).

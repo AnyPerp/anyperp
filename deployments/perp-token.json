@@ -1,0 +1,20 @@
+{
+  "name": "AnyPerp",
+  "ticker": "PERP",
+  "symbol": "$PERP",
+  "ca": "0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049",
+  "chain": "Robinhood Mainnet",
+  "allocation": {
+    "teamPct": 5,
+    "communityPct": 95,
+    "vc": false
+  },
+  "useCase": "Community token for the AnyPerp ecosystem, supporting testnet participation, product research, development updates, and community initiatives around isolated perpetual markets.",
+  "links": {
+    "website": "https://anyperp.fun/#token",
+    "dexscreener": "https://dexscreener.com/robinhood/0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049",
+    "x": "https://x.com/tradeanyperp"
+  },
+  "status": "live",
+  "updatedAt": "2026-07-22"
+}
