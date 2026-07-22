@@ -136,45 +136,6 @@ Open-source engineering surface for the AnyPerp testnet stack:
 
 Internal product docs, marketing plans, admin tooling, host credentials, and media production assets are **not** published in this repository.
 
-## Contributors
-
-GitHub-style credits for people shipping AnyPerp. Avatars link to their GitHub profiles.
-
-<table>
-  <tr>
-    <td align="center" width="140">
-      <a href="https://github.com/tradeanyperp">
-        <img src="https://github.com/tradeanyperp.png?size=100" width="64" height="64" alt="tradeanyperp" /><br />
-        <b>tradeanyperp</b>
-      </a>
-      <br /><sub>Protocol · product</sub>
-    </td>
-    <td align="center" width="140">
-      <a href="https://github.com/CallMESuper">
-        <img src="https://github.com/CallMESuper.png?size=100" width="64" height="64" alt="CallMESuper" /><br />
-        <b>CallMESuper</b>
-      </a>
-      <br /><sub>Super</sub>
-    </td>
-    <td align="center" width="140">
-      <a href="https://github.com/nmayorga092">
-        <img src="https://github.com/nmayorga092.png?size=100" width="64" height="64" alt="nmayorga092" /><br />
-        <b>nmayorga092</b>
-      </a>
-      <br /><sub>Nicolás</sub>
-    </td>
-  </tr>
-</table>
-
-<p>
-  <a href="https://github.com/AnyPerp/anyperp/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=AnyPerp/anyperp" alt="Contributors" />
-  </a>
-</p>
-
-> **Note:** The native GitHub **Contributors** sidebar only lists accounts that have **committed code**. The table above is curated project credits.
-
-
 ## Security status
 
 Compilation and included tests are engineering checks, **not** an audit. Real-funds use is blocked until real oracles, economic safety proofs, independent audits, legal review, and operational readiness.
