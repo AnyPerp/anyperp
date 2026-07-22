@@ -10,12 +10,16 @@ node_modules
 .pytest_cache
 dist
 out
-build
+# Keep build/sites-vite-plugin.ts for Vite; ignore only heavy ops dumps/logs
+build/*.log
+build/*.json
+!build/sites-vite-plugin.ts
 videos
 social
 private
 whitepaper
-docs
+# root docs/ (internal) — public/docs PDF still uploads
+/docs
 db
 drizzle
 examples
