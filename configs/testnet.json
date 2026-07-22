@@ -1,0 +1,46 @@
+{
+  "env": "testnet",
+  "project": "AnyPerp",
+  "release": "0.1.0-testnet",
+  "chain": {
+    "id": 46630,
+    "name": "Robinhood Chain Testnet",
+    "shortName": "RHC Testnet",
+    "nativeCurrency": { "name": "Ether", "symbol": "ETH", "decimals": 18 },
+    "rpcHttp": "https://rpc.testnet.chain.robinhood.com",
+    "rpcWs": "wss://feed.testnet.chain.robinhood.com",
+    "explorer": "https://explorer.testnet.chain.robinhood.com",
+    "faucet": "https://faucet.testnet.chain.robinhood.com/",
+    "testnet": true
+  },
+  "features": {
+    "allowMockOracle": true,
+    "allowMintableCollateral": true,
+    "publicFaucet": true,
+    "deployMockCollateral": true,
+    "requireTimelockGovernance": true,
+    "requireMultisigProposer": true,
+    "minTimelockDelaySeconds": 3600
+  },
+  "gates": {
+    "requireMainnetReadyFlag": false,
+    "requireAuditAttestation": false,
+    "blockMockOnMainnet": false,
+    "blockMintableCollateral": false
+  },
+  "deploy": {
+    "allowedChainIds": [46630, 31337],
+    "minDeployerEth": "0.008",
+    "statusLabel": "unaudited_testnet_prototype"
+  },
+  "site": {
+    "url": "https://anyperp.fun",
+    "docsPath": "/?surface=docs",
+    "appPath": "/?surface=app"
+  },
+  "notes": [
+    "Full public testnet launch target.",
+    "Mock apUSD + mock oracle routes are intentional.",
+    "Same pipeline as mainnet; flip env + fill configs/mainnet.json later."
+  ]
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" role="img" aria-labelledby="arch-title arch-desc" preserveAspectRatio="xMidYMid meet">
+  <title id="arch-title">Isolated market lanes</title>
+  <desc id="arch-desc">Three separate market vault lanes with margin, LP, and insurance modules. No cross-market debit.</desc>
+
+  <rect width="1100" height="560" rx="16" fill="#111111"/>
+
+  <!-- Title bar -->
+  <rect x="20" y="20" width="1060" height="52" rx="12" fill="#1A1A1A" stroke="#2A2A2A" stroke-width="2"/>
+  <circle cx="52" cy="46" r="7" fill="#00C805"/>
+  <text x="74" y="52" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Protocol boundary</text>
+  <text x="1056" y="52" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#8A948A">No cross-market debit</text>
+
+  <!-- Lane 1 -->
+  <g>
+    <rect x="20" y="96" width="1060" height="118" rx="16" fill="#141414" stroke="#00C805" stroke-width="3"/>
+    <rect x="48" y="137" width="22" height="22" rx="5" fill="#00C805"/>
+    <text x="86" y="154" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">TOKEN A-PERP</text>
+    <rect x="360" y="127" width="160" height="56" rx="12" fill="#00D4A0"/>
+    <text x="440" y="161" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#000000">Margin</text>
+    <rect x="540" y="127" width="160" height="56" rx="12" fill="#F4F7F4"/>
+    <text x="620" y="161" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#000000">LP vault</text>
+    <rect x="720" y="127" width="160" height="56" rx="12" fill="#FF5000"/>
+    <text x="800" y="161" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Insurance</text>
+    <text x="1000" y="161" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#00C805" letter-spacing="1.5">ISOLATED</text>
+  </g>
+
+  <!-- Lane 2 -->
+  <g>
+    <rect x="20" y="234" width="1060" height="118" rx="16" fill="#141414" stroke="#00D4A0" stroke-width="3"/>
+    <rect x="48" y="275" width="22" height="22" rx="5" fill="#00D4A0"/>
+    <text x="86" y="292" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">TOKEN B-PERP</text>
+    <rect x="360" y="265" width="160" height="56" rx="12" fill="#00D4A0"/>
+    <text x="440" y="299" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#000000">Margin</text>
+    <rect x="540" y="265" width="160" height="56" rx="12" fill="#F4F7F4"/>
+    <text x="620" y="299" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#000000">LP vault</text>
+    <rect x="720" y="265" width="160" height="56" rx="12" fill="#FF5000"/>
+    <text x="800" y="299" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Insurance</text>
+    <text x="1000" y="299" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#00D4A0" letter-spacing="1.5">ISOLATED</text>
+  </g>
+
+  <!-- Lane 3 -->
+  <g>
+    <rect x="20" y="372" width="1060" height="118" rx="16" fill="#141414" stroke="#FFB800" stroke-width="3"/>
+    <rect x="48" y="413" width="22" height="22" rx="5" fill="#FFB800"/>
+    <text x="86" y="430" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">TOKEN C-PERP</text>
+    <rect x="360" y="403" width="160" height="56" rx="12" fill="#00D4A0"/>
+    <text x="440" y="437" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#000000">Margin</text>
+    <rect x="540" y="403" width="160" height="56" rx="12" fill="#F4F7F4"/>
+    <text x="620" y="437" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#000000">LP vault</text>
+    <rect x="720" y="403" width="160" height="56" rx="12" fill="#FF5000"/>
+    <text x="800" y="437" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Insurance</text>
+    <text x="1000" y="437" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#FFB800" letter-spacing="1.5">ISOLATED</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="550" y="532" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#8A948A">Each market keeps its own margin, LP vault, and insurance — no shared debit path</text>
+</svg>

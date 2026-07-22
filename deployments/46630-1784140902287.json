@@ -1,0 +1,90 @@
+{
+  "project": "AnyPerp",
+  "status": "unaudited_testnet_prototype",
+  "chainId": 46630,
+  "deployer": "0x3a147ed1980bbD468Bc4FA6102eB264CbC8E2556",
+  "governance": "0xaf494c7ad0732d2a2a7b8d47757f4aa2b2908ace",
+  "emergencyCouncil": "0xffEE7f1305c2D43f6512B33A17fD80e54b5830cD",
+  "treasury": "0x286539fc7431076aA75D11351dEcC5C37C724Ff7",
+  "configurationRequired": [
+    "Timelock must configure supported collateral, risk envelopes, oracle adapters, routes, fees, and backstop allowances."
+  ],
+  "generatedAt": "2026-07-15T18:41:42.286Z",
+  "contracts": {
+    "OracleRouter": {
+      "address": "0xb6708400596ee81c7b02284a3450dee609183b88",
+      "transactionHash": "0x37cc96f7c07570bc90089eb0733e7ef1161e92befb7568d51a52023115a8181c",
+      "blockNumber": "90513036"
+    },
+    "RiskManager": {
+      "address": "0xbbc4547d256ce79ad9e5ddbe81b661c0f99d437f",
+      "transactionHash": "0xdb480db331f3e6c6e87050b7b521b3002ca1c12574400208da034afeac6d7009",
+      "blockNumber": "90513043"
+    },
+    "FundingEngine": {
+      "address": "0xc5ff600365a73f6e9d2dd84307db5b14d4c88805",
+      "transactionHash": "0xb4045d833f3399eefb9313c6f7066dba8a8fbb67f88bbb224e337bfa0e98a5ac",
+      "blockNumber": "90513050"
+    },
+    "FeeManager": {
+      "address": "0x6da51550e570259793c1d45237b034a8b625e660",
+      "transactionHash": "0x1bd35243fbaf2c13d9bade4a74ccc6668737d9a657f439b5fa4b981387364a18",
+      "blockNumber": "90513057"
+    },
+    "LiquidationEngine": {
+      "address": "0x60aab011ac25e1b0f49b61a3c8861341353f5e88",
+      "transactionHash": "0x102fa8491b455905dfe187558d83951dbc9305a8ccc48b253c25153d067f1d6c",
+      "blockNumber": "90513070"
+    },
+    "TriggerOrderManager": {
+      "address": "0xa69158420424e2687eea3646f0017f98ffc39aef",
+      "transactionHash": "0x931d042f071669a20b56f0c0f8c34e278327f7e8f23b04782d309a328a170fab",
+      "blockNumber": "90513085"
+    },
+    "KeeperRegistry": {
+      "address": "0x91a256df0cbaf615af513418dbed76a00ba15fac",
+      "transactionHash": "0x9b803b65b052a2d2f7bff32c6c47271395802cb6cc16c7cb867009ce9978eaf1",
+      "blockNumber": "90513093"
+    },
+    "MarketRegistry": {
+      "address": "0x9b7c5bd08194dc7194ad2227541b64a2b0606c73",
+      "transactionHash": "0x8532c015093110938209d6012d291acf44240edd13c7f2d9e0a37aefe6031f0a",
+      "blockNumber": "90513111"
+    },
+    "EmergencyGuardian": {
+      "address": "0x8fda5e64d94fcff2552cb84f8ea9b58aeef82bec",
+      "transactionHash": "0xf478a796ed98ff592cc77409fb4fa32fa37ec922e71e1db63912ad27aece0a00",
+      "blockNumber": "90513123"
+    },
+    "ProtocolBackstop": {
+      "address": "0xb77f031695b0ace7b5a1c1ccb4d3a1cae872b2ee",
+      "transactionHash": "0x4b91410a55025174d70c6ae15586197a4512394d5f5dc8df15870bf17ff1b32c",
+      "blockNumber": "90513135"
+    },
+    "MarketImplementation": {
+      "address": "0xe039c66ae77a7400123c4db239c75c43a3b8fb88",
+      "transactionHash": "0xce68f6328aaae87e4abf0e4ae56f08d99c59ee72050fe2f0d8fcac7a12e8b3ed",
+      "blockNumber": "90513146"
+    },
+    "VaultDeployer": {
+      "address": "0x3a5cbb4de727876f105214becd457790bc5eb48e",
+      "transactionHash": "0x7f4de99225da759458762e3f96e3a7158f831790861912ac8135a97c7bfbdf41",
+      "blockNumber": "90513155"
+    },
+    "MarketDeployer": {
+      "address": "0x21eca36d70212c2f013c71ad0cc8073e0e8f24d0",
+      "transactionHash": "0xfdc7c33ac9c9417293e0eeb69d8f90ef3266c1602f52e284504567033195174d",
+      "blockNumber": "90513161"
+    },
+    "MockCollateral": {
+      "address": "0x2e011bccdf1d1dbe414ac5bcc0f3a24098e2e015",
+      "transactionHash": "0xb1fa1fc3162964fae2bf66c6ee33a3817eff18d57911e3d8355db9551ddee644",
+      "blockNumber": "90513169"
+    },
+    "MarketFactory": {
+      "address": "0x3c17f6cdf7643cb4c40a2cb700f911e7edeb88ee",
+      "transactionHash": "0x5d0136a33140d2201684203cc643ad9b118222bbf31fe3c51af418b20f0123d8",
+      "blockNumber": "90513179"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="hero-title hero-desc" preserveAspectRatio="xMidYMid slice">
+  <title id="hero-title">AnyPerp trading chart with isolated market vaults</title>
+  <desc id="hero-desc">A black trading panel with green and coral candlesticks beside three sealed vault cards, leaving space for a UI overlay.</desc>
+
+  <!-- Mint canvas — flat, no gradient -->
+  <rect width="1600" height="900" fill="#D8EBE0"/>
+
+  <!-- Soft grid accents -->
+  <g stroke="#C2DDD0" stroke-width="1" opacity="0.55">
+    <path d="M0 180H1600M0 360H1600M0 540H1600M0 720H1600"/>
+    <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+  </g>
+
+  <!-- Trading panel shadow (flat offset, not a gradient) -->
+  <rect x="148" y="168" width="760" height="460" rx="36" fill="#000000" opacity="0.08"/>
+
+  <!-- Trading panel -->
+  <rect x="120" y="140" width="760" height="460" rx="36" fill="#000000"/>
+  <rect x="120" y="140" width="760" height="52" rx="36" fill="#111111"/>
+  <rect x="120" y="168" width="760" height="24" fill="#111111"/>
+  <!-- Window dots -->
+  <circle cx="160" cy="166" r="7" fill="#00C805"/>
+  <circle cx="186" cy="166" r="7" fill="#FFB800"/>
+  <circle cx="212" cy="166" r="7" fill="#FF5000"/>
+
+  <!-- Chart grid lines -->
+  <g stroke="#1F1F1F" stroke-width="2">
+    <path d="M170 250H850"/>
+    <path d="M170 310H850"/>
+    <path d="M170 370H850"/>
+    <path d="M170 430H850"/>
+    <path d="M170 490H850"/>
+    <path d="M170 550H850"/>
+  </g>
+
+  <!-- Candlesticks: green up / coral down (simple rects + wicks) -->
+  <g stroke-linecap="round">
+    <!-- 1 green -->
+    <line x1="210" y1="420" x2="210" y2="500" stroke="#00C805" stroke-width="3"/>
+    <rect x="200" y="440" width="20" height="48" rx="3" fill="#00C805"/>
+    <!-- 2 red -->
+    <line x1="260" y1="400" x2="260" y2="490" stroke="#FF5000" stroke-width="3"/>
+    <rect x="250" y="420" width="20" height="50" rx="3" fill="#FF5000"/>
+    <!-- 3 green -->
+    <line x1="310" y1="380" x2="310" y2="470" stroke="#00C805" stroke-width="3"/>
+    <rect x="300" y="400" width="20" height="52" rx="3" fill="#00C805"/>
+    <!-- 4 green -->
+    <line x1="360" y1="360" x2="360" y2="450" stroke="#00C805" stroke-width="3"/>
+    <rect x="350" y="375" width="20" height="55" rx="3" fill="#00C805"/>
+    <!-- 5 red -->
+    <line x1="410" y1="340" x2="410" y2="430" stroke="#FF5000" stroke-width="3"/>
+    <rect x="400" y="355" width="20" height="55" rx="3" fill="#FF5000"/>
+    <!-- 6 green -->
+    <line x1="460" y1="320" x2="460" y2="410" stroke="#00C805" stroke-width="3"/>
+    <rect x="450" y="335" width="20" height="58" rx="3" fill="#00C805"/>
+    <!-- 7 green -->
+    <line x1="510" y1="300" x2="510" y2="390" stroke="#00C805" stroke-width="3"/>
+    <rect x="500" y="310" width="20" height="62" rx="3" fill="#00C805"/>
+    <!-- 8 red -->
+    <line x1="560" y1="290" x2="560" y2="380" stroke="#FF5000" stroke-width="3"/>
+    <rect x="550" y="305" width="20" height="55" rx="3" fill="#FF5000"/>
+    <!-- 9 green -->
+    <line x1="610" y1="270" x2="610" y2="360" stroke="#00C805" stroke-width="3"/>
+    <rect x="600" y="280" width="20" height="64" rx="3" fill="#00C805"/>
+    <!-- 10 green -->
+    <line x1="660" y1="250" x2="660" y2="340" stroke="#00C805" stroke-width="3"/>
+    <rect x="650" y="260" width="20" height="68" rx="3" fill="#00C805"/>
+    <!-- 11 green -->
+    <line x1="710" y1="235" x2="710" y2="320" stroke="#00C805" stroke-width="3"/>
+    <rect x="700" y="245" width="20" height="70" rx="3" fill="#00C805"/>
+    <!-- 12 green peak -->
+    <line x1="760" y1="220" x2="760" y2="300" stroke="#00C805" stroke-width="3"/>
+    <rect x="750" y="230" width="20" height="72" rx="3" fill="#00C805"/>
+    <!-- 13 green -->
+    <line x1="810" y1="210" x2="810" y2="285" stroke="#00C805" stroke-width="3"/>
+    <rect x="800" y="220" width="20" height="60" rx="3" fill="#00C805"/>
+  </g>
+
+  <!-- Trend guide line (flat solid) -->
+  <path d="M200 490 L320 430 L450 360 L600 300 L820 230" fill="none" stroke="#7CFF3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+
+  <!-- Vault card 1 shadow + card -->
+  <rect x="980" y="150" width="220" height="150" rx="22" fill="#000000" opacity="0.08"/>
+  <rect x="970" y="140" width="220" height="150" rx="22" fill="#FFFFFF" stroke="#E0E8E2" stroke-width="2"/>
+  <rect x="970" y="140" width="10" height="150" rx="5" fill="#00C805"/>
+  <rect x="1010" y="185" width="100" height="12" rx="4" fill="#E8F0EA"/>
+  <rect x="1010" y="210" width="70" height="10" rx="4" fill="#E8F0EA"/>
+  <circle cx="1145" cy="170" r="16" fill="#00C805"/>
+  <path d="M1138 170 L1143 175 L1154 164" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Vault card 2 -->
+  <rect x="1040" y="280" width="220" height="150" rx="22" fill="#000000" opacity="0.08"/>
+  <rect x="1030" y="270" width="220" height="150" rx="22" fill="#FFFFFF" stroke="#E0E8E2" stroke-width="2"/>
+  <rect x="1030" y="270" width="10" height="150" rx="5" fill="#FFB800"/>
+  <rect x="1070" y="315" width="100" height="12" rx="4" fill="#E8F0EA"/>
+  <rect x="1070" y="340" width="70" height="10" rx="4" fill="#E8F0EA"/>
+  <circle cx="1205" cy="300" r="16" fill="#00C805"/>
+  <path d="M1198 300 L1203 305 L1214 294" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Vault card 3 -->
+  <rect x="1100" y="410" width="220" height="150" rx="22" fill="#000000" opacity="0.08"/>
+  <rect x="1090" y="400" width="220" height="150" rx="22" fill="#FFFFFF" stroke="#E0E8E2" stroke-width="2"/>
+  <rect x="1090" y="400" width="10" height="150" rx="5" fill="#00A3FF"/>
+  <rect x="1130" y="445" width="100" height="12" rx="4" fill="#E8F0EA"/>
+  <rect x="1130" y="470" width="70" height="10" rx="4" fill="#E8F0EA"/>
+  <circle cx="1265" cy="430" r="16" fill="#00C805"/>
+  <path d="M1258 430 L1263 435 L1274 424" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Accent coin (bottom-left of panel, not in overlay zone) -->
+  <circle cx="200" cy="680" r="42" fill="#FFFFFF" stroke="#00C805" stroke-width="6"/>
+  <circle cx="200" cy="680" r="28" fill="#00C805"/>
+  <path d="M190 680 L198 688 L214 668" fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Long / short chips — green points UP, red points DOWN -->
+  <rect x="270" y="655" width="92" height="36" rx="10" fill="#00C805"/>
+  <!-- Up arrow (long) -->
+  <path d="M316 678 V666" fill="none" stroke="#041204" stroke-width="4" stroke-linecap="round"/>
+  <path d="M316 662 L308 672 H324 Z" fill="#041204"/>
+  <rect x="376" y="655" width="92" height="36" rx="10" fill="#FF5000"/>
+  <!-- Down arrow (short) -->
+  <path d="M422 668 V680" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M422 684 L414 674 H430 Z" fill="#FFFFFF"/>
+</svg>

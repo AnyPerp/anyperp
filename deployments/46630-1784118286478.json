@@ -1,0 +1,64 @@
+{
+  "project": "AnyPerp",
+  "status": "unaudited_testnet_prototype",
+  "chainId": 46630,
+  "deployer": "0xfdd7083Cf8050FE8c1e07877500243e92317Ce02",
+  "generatedAt": "2026-07-15T12:24:46.478Z",
+  "contracts": {
+    "OracleRouter": {
+      "address": "0xa3cd70efbef7e31e41d1d21e0a4787c07b7d653e",
+      "transactionHash": "0x25f682763777e3f1092b4b1b2a04ed2ff618d23d46c75bc67b4a035663786c16",
+      "blockNumber": "90458107"
+    },
+    "RiskManager": {
+      "address": "0xb9f7542abcca3877127323f18713b005d1981206",
+      "transactionHash": "0x373afd0a924633d4d5d3855719c95cdd1a988511b10703f21982c2e7d09a7e9f",
+      "blockNumber": "90458110"
+    },
+    "FundingEngine": {
+      "address": "0x5eed437c3f8f80430998e33d3477a2d3d02b4263",
+      "transactionHash": "0xc2b528fdf7c39f0a3204ed9110effd0ddea12b472b7222569de04ca81be7da0e",
+      "blockNumber": "90458115"
+    },
+    "FeeManager": {
+      "address": "0xd59e580e878e6bf3b277ba4563f3c76d09d6d532",
+      "transactionHash": "0x79dd489fae2f72e188fc0cfe78060e54444e8650c45c4a92d135093607ef6c06",
+      "blockNumber": "90458124"
+    },
+    "LiquidationEngine": {
+      "address": "0xe82c7fefb076773e1be16bff20b1306de53ebd99",
+      "transactionHash": "0xada59ca99753ebfe33fbeeac58f788654d365ac4fe6663edfa588239b25b6b32",
+      "blockNumber": "90458129"
+    },
+    "TriggerOrderManager": {
+      "address": "0x32af7101f1a571540425b42da4fda8d17c2ae0db",
+      "transactionHash": "0xe368d4e5dde91f2a5201a7104416e16e84558ff591e5ec8b7cb04ae60545033d",
+      "blockNumber": "90458135"
+    },
+    "KeeperRegistry": {
+      "address": "0x19b4231c8f2230a3e604b4819bf2edee52c39182",
+      "transactionHash": "0x806d3a993c17846c191c81286c4cad5b6b4387c2589d4076e20287b0161b1b46",
+      "blockNumber": "90458141"
+    },
+    "MarketRegistry": {
+      "address": "0x339a563dce291926a9c6f7a4ec5ed9b114145449",
+      "transactionHash": "0xc346070e1040f4fbf4daec5c676aece041615e66eb6a9967848c1190948f3e96",
+      "blockNumber": "90458149"
+    },
+    "EmergencyGuardian": {
+      "address": "0xc05d79fe582efa22aafe1b87b9300847095dca51",
+      "transactionHash": "0x2d0b838e3c8e8b95c973c01c8fc3d6852c56291d1072402170099b1ad192e47a",
+      "blockNumber": "90458153"
+    },
+    "MockCollateral": {
+      "address": "0xdc75678dc5c1fa44d32ebaad99dfc1daa4205e08",
+      "transactionHash": "0x1da9e5100df447f208e4ed3b2fbb0c7d89237fdf876c54d07d3c77341e194ff7",
+      "blockNumber": "90458159"
+    },
+    "MarketFactory": {
+      "address": "0x48dca0e948cb201abc84cd56e9bcf9389a1de977",
+      "transactionHash": "0x15d51ce139632b006b61a3cd7c894e9df1a038be12232e58d3062535739f5c21",
+      "blockNumber": "90458164"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "unaudited_testnet_governance",
+  "chainId": 46630,
+  "deployer": "0x3a147ed1980bbD468Bc4FA6102eB264CbC8E2556",
+  "governanceTimelock": "0xaf494c7ad0732d2a2a7b8d47757f4aa2b2908ace",
+  "proposer": "0x0Cb2Fb9377a7C3B52eba84A9709a6F54E23eaDc5",
+  "executor": "0x8aA304A7204835bBec666Cb8FC24BB9170258F77",
+  "admin": "0x3a147ed1980bbD468Bc4FA6102eB264CbC8E2556",
+  "minimumDelaySeconds": "3600",
+  "transactionHash": "0x4e07c142f95c1f91a6f44bc43f1437bd99d508c2bd82b2049de376c4271885cb",
+  "blockNumber": "90513022",
+  "generatedAt": "2026-07-15T18:40:14.098Z",
+  "nextStep": "Set GOVERNANCE_TIMELOCK_ADDRESS to governanceTimelock, then run deploy-testnet.mjs."
+}

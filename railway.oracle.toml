@@ -1,0 +1,7 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.services"
+
+[deploy]
+startCommand = "pnpm oracle:push:loop"
+restartPolicyType = "ON_FAILURE"

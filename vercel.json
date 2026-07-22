@@ -1,0 +1,73 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build && node scripts/generate-static-index.mjs",
+  "outputDirectory": "dist/client",
+  "headers": [
+    {
+      "source": "/v1/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/health/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/admin-ui/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    },
+    {
+      "source": "/admin-api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/v1/:path*",
+      "destination": "https://anyperp-stack-production.up.railway.app/v1/:path*"
+    },
+    {
+      "source": "/health/:path*",
+      "destination": "https://anyperp-stack-production.up.railway.app/health/:path*"
+    },
+    {
+      "source": "/metrics",
+      "destination": "https://anyperp-stack-production.up.railway.app/metrics"
+    },
+    {
+      "source": "/ws",
+      "destination": "https://anyperp-stack-production.up.railway.app/ws"
+    },
+    {
+      "source": "/admin-ui",
+      "destination": "https://anyperp-stack-production.up.railway.app/admin-ui/index.html"
+    },
+    {
+      "source": "/admin-ui/",
+      "destination": "https://anyperp-stack-production.up.railway.app/admin-ui/index.html"
+    },
+    {
+      "source": "/admin-ui/:path*",
+      "destination": "https://anyperp-stack-production.up.railway.app/admin-ui/:path*"
+    },
+    {
+      "source": "/admin-api/:path*",
+      "destination": "https://anyperp-stack-production.up.railway.app/admin-api/:path*"
+    },
+    {
+      "source": "/((?!assets/|logo/|banner/|anyperp-|favicon|file|globe|window|_headers|v1/|health/|metrics|ws|admin-ui|admin-api).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

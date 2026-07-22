@@ -1,0 +1,7 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.services"
+
+[deploy]
+startCommand = "pnpm exec tsx services/keepers/src/worker.ts"
+restartPolicyType = "ON_FAILURE"

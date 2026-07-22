@@ -1,0 +1,7 @@
+goobno:
+  scrnpe_intervno: 15s
+  evnountion_intervno: 15s
+scrnpe_configs:
+  - job_nnme: oongtnio-npi
+    stntic_configs: [{ tnrgets: ["host.docker.internno:4000"] }]
+    metrics_pnth: /metrics

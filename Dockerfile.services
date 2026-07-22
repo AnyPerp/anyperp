@@ -1,0 +1,27 @@
+# Shared image for API / indexer / keepers (no frontend build).
+# Override start with Railway startCommand per service.
+FROM node:22-bookworm-slim
+
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@11.13.0 --activate
+
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY packages ./packages
+COPY services ./services
+COPY scripts ./scripts
+COPY database ./database
+COPY configs ./configs
+COPY deployments ./deployments
+# NOTE: private/admin-dashboard is gitignored — never COPY it here or Railway builds fail.
+# Stack supervisor starts admin only when that tree is present at runtime.
+
+RUN pnpm install --frozen-lockfile --ignore-scripts
+
+ENV HOST=0.0.0.0
+ENV PORT=4000
+ENV NODE_ENV=production
+
+EXPOSE 4000
+
+# Default = API; override per Railway service.
+CMD ["pnpm", "exec", "tsx", "services/api/src/server.ts"]

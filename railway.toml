@@ -1,0 +1,9 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.services"
+
+[deploy]
+startCommand = "node scripts/start-backend-stack.mjs"
+healthcheckPath = "/health/live"
+healthcheckTimeout = 180
+restartPolicyType = "ON_FAILURE"

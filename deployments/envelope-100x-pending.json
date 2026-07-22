@@ -1,0 +1,11 @@
+{
+  "op": "setEnvelope experimental for 100x",
+  "opId": "0x28ffed18f8626ef1173196b3811d878a49b426c9078198b07f21ccf2a2f71aff",
+  "salt": "0x0000000000000000000000000000000000000000000000000000019f6b806eb2",
+  "delay": 3600,
+  "readyAt": 1784218621,
+  "scheduleTx": "0x5309ab45d5287fcbbb35e5a63011374a8bb18f8c63e9e3b2b9988e62bd129bae",
+  "targetIM": 100,
+  "maxLev": 100,
+  "execute": "node scripts/execute-envelope-100x.mjs after readyAt"
+}

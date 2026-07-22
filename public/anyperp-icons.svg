@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 440" role="img" aria-labelledby="icons-title icons-desc" preserveAspectRatio="xMidYMid meet">
+  <title id="icons-title">AnyPerp product pillars</title>
+  <desc id="icons-desc">Four cards: isolated risk vault, oracle node, long short routes, and insurance shield.</desc>
+
+  <rect width="1600" height="440" fill="#FFFFFF"/>
+
+  <!-- Card 1: Isolated vault -->
+  <g>
+    <rect x="60" y="32" width="340" height="376" rx="28" fill="#FFFFFF" stroke="#E8EBE8" stroke-width="2"/>
+    <rect x="60" y="32" width="340" height="8" rx="4" fill="#00C805"/>
+    <!-- Icon only in upper zone; labels sit below with clear gap -->
+    <g transform="translate(230 168)">
+      <path d="M0 -54 L54 -24 L54 30 L0 60 L-54 30 L-54 -24 Z" fill="#00C805" stroke="#000000" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M0 -54 L54 -24 L0 6 L-54 -24 Z" fill="#00A804" stroke="#000000" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M0 6 L54 -24 L54 30 L0 60 Z" fill="#009604" stroke="#000000" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="-18" y="-2" width="36" height="28" rx="5" fill="#000000"/>
+      <path d="M-11 -2 V-12 A11 11 0 0 1 11 -12 V-2" fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="0" cy="10" r="4" fill="#00C805"/>
+    </g>
+    <text x="230" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#000000">Isolated risk</text>
+    <text x="230" y="352" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#6A6A6A">One vault per market</text>
+  </g>
+
+  <!-- Card 2: Oracle -->
+  <g>
+    <rect x="440" y="32" width="340" height="376" rx="28" fill="#FFFFFF" stroke="#E8EBE8" stroke-width="2"/>
+    <rect x="440" y="32" width="340" height="8" rx="4" fill="#00A3FF"/>
+    <g transform="translate(610 168)">
+      <circle cx="0" cy="0" r="58" fill="none" stroke="#00C805" stroke-width="5" stroke-dasharray="14 10"/>
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#B8F0BA" stroke-width="4"/>
+      <polygon points="0,-34 28,-16 28,18 0,36 -28,18 -28,-16" fill="#000000"/>
+      <circle cx="0" cy="0" r="10" fill="#00C805"/>
+      <circle cx="0" cy="-58" r="5" fill="#00C805"/>
+      <circle cx="58" cy="0" r="5" fill="#00C805"/>
+      <circle cx="0" cy="58" r="5" fill="#00C805"/>
+      <circle cx="-58" cy="0" r="5" fill="#00C805"/>
+    </g>
+    <text x="610" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#000000">Live oracles</text>
+    <text x="610" y="352" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#6A6A6A">Fresh · confident · deep</text>
+  </g>
+
+  <!-- Card 3: Long / short — green points UP, red points DOWN -->
+  <g>
+    <rect x="820" y="32" width="340" height="376" rx="28" fill="#FFFFFF" stroke="#E8EBE8" stroke-width="2"/>
+    <rect x="820" y="32" width="340" height="8" rx="4" fill="#FF5000"/>
+    <!-- Green LONG: up-right arrow -->
+    <g transform="translate(930 168)">
+      <rect x="-48" y="-48" width="96" height="96" rx="22" fill="#00C805"/>
+      <!-- shaft up -->
+      <path d="M0 28 V-18" fill="none" stroke="#041204" stroke-width="12" stroke-linecap="round"/>
+      <!-- head points UP -->
+      <path d="M0 -34 L-18 -10 H18 Z" fill="#041204"/>
+    </g>
+    <!-- Red SHORT: down-right arrow -->
+    <g transform="translate(1050 168)">
+      <rect x="-48" y="-48" width="96" height="96" rx="22" fill="#FF5000"/>
+      <!-- shaft down -->
+      <path d="M0 -28 V18" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+      <!-- head points DOWN -->
+      <path d="M0 34 L-18 10 H18 Z" fill="#FFFFFF"/>
+    </g>
+    <text x="990" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#000000">Long &amp; short</text>
+    <text x="990" y="352" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#6A6A6A">Bounded fills both ways</text>
+  </g>
+
+  <!-- Card 4: Insurance -->
+  <g>
+    <rect x="1200" y="32" width="340" height="376" rx="28" fill="#FFFFFF" stroke="#E8EBE8" stroke-width="2"/>
+    <rect x="1200" y="32" width="340" height="8" rx="4" fill="#FFB800"/>
+    <g transform="translate(1370 168)">
+      <path d="M0 -56 L60 -34 V16 C60 58 32 88 0 104 C-32 88 -60 58 -60 16 V-34 Z" fill="#FFB800" stroke="#000000" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M-18 10 L-5 24 L24 -10" fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="1370" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#000000">Insurance first</text>
+    <text x="1370" y="352" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#6A6A6A">Market-local backstop</text>
+  </g>
+</svg>

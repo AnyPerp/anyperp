@@ -1,0 +1,42 @@
+{
+  "env": "anvil",
+  "project": "AnyPerp",
+  "release": "local-dev",
+  "chain": {
+    "id": 31337,
+    "name": "Local Anvil",
+    "shortName": "Anvil",
+    "nativeCurrency": { "name": "Ether", "symbol": "ETH", "decimals": 18 },
+    "rpcHttp": "http://127.0.0.1:8545",
+    "rpcWs": "ws://127.0.0.1:8545",
+    "explorer": null,
+    "faucet": null,
+    "testnet": true
+  },
+  "features": {
+    "allowMockOracle": true,
+    "allowMintableCollateral": true,
+    "publicFaucet": true,
+    "deployMockCollateral": true,
+    "requireTimelockGovernance": false,
+    "requireMultisigProposer": false,
+    "minTimelockDelaySeconds": 1
+  },
+  "gates": {
+    "requireMainnetReadyFlag": false,
+    "requireAuditAttestation": false,
+    "blockMockOnMainnet": false,
+    "blockMintableCollateral": false
+  },
+  "deploy": {
+    "allowedChainIds": [31337],
+    "minDeployerEth": "0",
+    "statusLabel": "local_anvil"
+  },
+  "site": {
+    "url": "http://localhost:3000",
+    "docsPath": "/?surface=docs",
+    "appPath": "/?surface=app"
+  },
+  "notes": ["Local Foundry/Anvil only. Never use these flags on mainnet."]
+}

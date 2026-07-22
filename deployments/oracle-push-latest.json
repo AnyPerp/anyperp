@@ -1,0 +1,88 @@
+{
+  "ok": false,
+  "pushed": 5,
+  "failed": 2,
+  "adapters": [
+    "0x957ce5792080b0aaf97632cc78c976905fe17962",
+    "0x5d669814ca06142581bcea83f51f794d0fd1eafb"
+  ],
+  "results": [
+    {
+      "ok": true,
+      "symbol": "BTC",
+      "kind": "pyth",
+      "baseToken": "0xf07a6d0b9453941c68dffebf181d556def09a8bf",
+      "price": 66424.6650301,
+      "txs": [
+        "0x46de91be06da392c645453865875f464698243949c1546547f2f713ffc42fad7",
+        "0x0a0c39d8b352c78524419b2ac8aae503378690c913e2aef9c07006a2aed3b90d"
+      ],
+      "feedId": "e62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
+      "publishTime": 1784684897
+    },
+    {
+      "ok": true,
+      "symbol": "ETH",
+      "kind": "pyth",
+      "baseToken": "0xb7e3b64017a8ea6ec6605eb2b18a2cbee3524d7c",
+      "price": 1935.11201805,
+      "txs": [
+        "0x92b1a6eb74d4be09d045ff4082f2ed8774317beebd5c522739cf7edfc511bc21",
+        "0x238b40026248547629926adec781a63be6894641ad683258a60ee99e423aa60d"
+      ],
+      "feedId": "ff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+      "publishTime": 1784684905
+    },
+    {
+      "ok": true,
+      "symbol": "SOL",
+      "kind": "pyth",
+      "baseToken": "0x55ad675bcb7e6ba0a5160b455054aa225e86d572",
+      "price": 78.405,
+      "txs": [
+        "0x7b06d8d1c83fa50adaddc94fea03c46aca2ff874939d355b3a853b382828280c",
+        "0x2959deb08e813e9db7e126ebc35cad13b9f56608ac01bc608ac0a1fd828fa8c1"
+      ],
+      "feedId": "ef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d",
+      "publishTime": 1784684913
+    },
+    {
+      "ok": false,
+      "symbol": "RATDOG",
+      "baseToken": "0x76bc45ad48439ab8ce1e5f5f9822abd01185409f",
+      "error": "no dex price"
+    },
+    {
+      "ok": true,
+      "symbol": "RWA",
+      "kind": "dex",
+      "baseToken": "0x578B554A7132c9f577F7d8d88ff85783626701ed",
+      "price": 0.0001798,
+      "txs": [
+        "0x152a0f872d54aa97e96b51b4e19690d4d80074b65969ab5d00f1e5ca5c1cd0e9",
+        "0xb9216ece30d3cd42e668711a0ae44c25ff7d9386325cba2b8bcf0ed6b1cd0771"
+      ],
+      "sourceCa": "0x4a380618777eED8D513bcd6e983DF3c5D2ba7777"
+    },
+    {
+      "ok": false,
+      "symbol": "CAPYBARA",
+      "baseToken": "0xD735B5259e3D7e8AEC664239a1cEA5Fc61793b19",
+      "error": "no dex price"
+    },
+    {
+      "ok": true,
+      "symbol": "YOLO",
+      "kind": "dex",
+      "baseToken": "0xfAd8B1a56961b6AC40461790CB9724c994Df9486",
+      "price": 0.00668,
+      "txs": [
+        "0x3b67f039a804c68bf8a2d58cd0aa9b8f15fae16ba395382e7eb3cba1eb672299",
+        "0xbe759712da3359f6806d8a136ba184539cd862e0dbe69f042376b9b5dc0e8a25"
+      ],
+      "sourceCa": "0x62C71cd34a52c30d894419CBcc55Db2aFA8032eA"
+    }
+  ],
+  "pusher": "0x3a147ed1980bbD468Bc4FA6102eB264CbC8E2556",
+  "at": "2026-07-22T01:48:58.879Z"
+}

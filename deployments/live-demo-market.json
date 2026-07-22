@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "brand": "AnyPerp",
+  "domain": "https://anyperp.fun",
+  "chainId": 46630,
+  "marketId": "0x0086bac6568bb3c77286c04f30a345f6cebca92a5619ec091faeda64e9079f82",
+  "market": "0x2D2EE857198874e89Db2Cf29C3E1B47Bfb184cEa",
+  "routeId": "0x14deb0349513e213518bd0247addd8e42d964ef2a7e19388719fbcf52ecbed73",
+  "liquidityVault": "0xa6026956fA4c20C7C4A04da076fA0d38dac21407",
+  "insuranceFund": "0x391dFF40D80de2E3093DBDb3e022F1811F86b687",
+  "collateral": "0x8f3e02f6ae47ec0e5ff5dcd4dd1bfbd3c1fed2f0",
+  "baseToken": "0xf07a6d0b9453941c68dffebf181d556def09a8bf",
+  "factory": "0xd1e154498a382074cf66f3274244d55b80b1a52d",
+  "generatedAt": "2026-07-16T09:24:55.572Z",
+  "oracleBridge": {
+    "mode": "pyth_hermes_to_mock_adapters",
+    "symbol": "BTC",
+    "multiAsset": "see deployments/listed-markets.json (BTC+ETH+SOL+RATDOG)",
+    "pushCommand": "pnpm oracle:push",
+    "loopCommand": "pnpm oracle:push:loop",
+    "note": "Multi-asset: Pyth BTC/ETH/SOL + DexScreener RH tokens via MockOracleAdapter.set"
+  },
+  "listed": {
+    "BTC": "0x2D2EE857198874e89Db2Cf29C3E1B47Bfb184cEa",
+    "ETH": "0x8792E44B9220a0Fa45Fa0c67D8B58cEB03C8bb57",
+    "SOL": "0xa7660AE91D532fFAe8F1531623fAe815B889d7a9",
+    "RATDOG": "0x0152536235A3Be21481d66BA6CA51Ba26C054A08"
+  },
+  "howToTest": [
+    "Connect wallet to Robinhood Chain Testnet (46630)",
+    "Ensure oracle pusher running: pnpm oracle:push:loop (multi-asset)",
+    "Open app → Trade → pick BTC / ETH / SOL / RATDOG chip",
+    "Mint test USD, deposit margin, long/short",
+    "Create tab → paste RH testnet token CA for new markets"
+  ]
+}

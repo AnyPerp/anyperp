@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "symbol": "RATDOG",
+  "source": "dexscreener robinhood",
+  "sourceCa": "0x6e48630073d7246a162Cc7536330c15f818096Cb",
+  "dexUrl": "https://dexscreener.com/robinhood/0x07ed04d3026401144dbdd86c24512546a1c5a857",
+  "priceUsd": 0.0002942,
+  "mc": 294238,
+  "testnetMirrorBase": "0x76bc45ad48439ab8ce1e5f5f9822abd01185409f",
+  "market": "0x0152536235A3Be21481d66BA6CA51Ba26C054A08",
+  "marketId": "0x273fb084e92f9c0c6c5f85e9b6ebea208507c206c51c5c3b2191bad364204042",
+  "liquidityVault": "0x9c36FD6AF6EFA741682d71792b7b547127afBD6f",
+  "insuranceFund": "0x41527ae494B5953d6Cc11c0a7733FB2Cb241bd0e",
+  "trades": [
+    "long 1000 base",
+    "close long",
+    "short 500 base",
+    "close short"
+  ],
+  "finalPosition": "0",
+  "longOi": "0",
+  "shortOi": "0",
+  "note": "DexScreener CA has no code on RHC testnet — traded testnet mirror with Dex price",
+  "generatedAt": "2026-07-16T12:49:40.837Z"
+}

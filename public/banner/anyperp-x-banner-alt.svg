@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500" fill="none" role="img" aria-label="AnyPerp banner alt">
+  <rect width="1500" height="500" fill="#F4F7F4"/>
+
+  <!-- Peak mark -->
+  <g transform="translate(280 280) scale(1.15)">
+    <path d="M-160 120 L0 -100 L40 -40 L40 120 Z" fill="#00C805"/>
+    <path d="M40 -40 L80 -100 L240 120 L40 120 Z" fill="#FF5000"/>
+    <path d="M0 -100 L40 -40 L80 -100 L40 -160 Z" fill="#009604"/>
+  </g>
+
+  <text x="560" y="230" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="78" font-weight="800" fill="#000000" letter-spacing="-2">AnyPerp</text>
+  <text x="560" y="290" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="28" font-weight="600" fill="#008A04">Any token. A perp. Today.</text>
+  <text x="560" y="340" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="500" fill="#6A6A6A">anyperp.fun · testnet</text>
+
+  <g transform="translate(1280 250)" opacity="0.95">
+    <rect x="0" y="30" width="28" height="90" rx="8" fill="#00C805"/>
+    <rect x="40" y="-100" width="28" height="220" rx="8" fill="#FF5000"/>
+    <rect x="80" y="-40" width="28" height="160" rx="8" fill="#009604"/>
+  </g>
+
+  <rect x="0" y="492" width="750" height="8" fill="#00C805"/>
+  <rect x="750" y="492" width="750" height="8" fill="#FF5000"/>
+</svg>

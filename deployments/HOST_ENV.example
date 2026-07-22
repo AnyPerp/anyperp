@@ -1,0 +1,68 @@
+# Copy these into your production/hosting env (Cloudflare / Vercel / etc.)
+# Generate a fresh template: pnpm launch --env testnet --write-host-env
+# After execute-e2e finishes, also add DEMO_* from deployments/live-demo-market.json
+# Mainnet later: same keys, configs/mainnet.json + faucet/mock flags false.
+
+ANYPERP_ENV=testnet
+NETWORK_MODE=testnet
+CHAIN_ID=46630
+
+NEXT_PUBLIC_NETWORK_MODE=testnet
+NEXT_PUBLIC_CHAIN_ID=46630
+NEXT_PUBLIC_CHAIN_NAME=RHC Testnet
+NEXT_PUBLIC_RPC_URL=https://rpc.testnet.chain.robinhood.com
+NEXT_PUBLIC_EXPLORER_URL=https://explorer.testnet.chain.robinhood.com
+NEXT_PUBLIC_FAUCET_URL=https://faucet.testnet.chain.robinhood.com/
+NEXT_PUBLIC_ALLOW_MOCK_ORACLE=true
+NEXT_PUBLIC_ALLOW_MINTABLE_COLLATERAL=true
+NEXT_PUBLIC_PUBLIC_FAUCET=true
+NEXT_PUBLIC_SITE_URL=https://anyperp.fun
+NEXT_PUBLIC_DOCS_URL=https://anyperp.fun/?surface=docs
+NEXT_PUBLIC_APP_URL=https://anyperp.fun/?surface=app
+
+NEXT_PUBLIC_MARKET_FACTORY_ADDRESS=0xd1e154498a382074cf66f3274244d55b80b1a52d
+NEXT_PUBLIC_MARKET_REGISTRY_ADDRESS=0xbdd1ab0bf5ea2846e05d80771958332f328e6da3
+NEXT_PUBLIC_ORACLE_ROUTER_ADDRESS=0xd9e74c0ebdfbb9538b63fe5d7e4456456ef4a13b
+NEXT_PUBLIC_LIQUIDATION_ENGINE_ADDRESS=0x381c70f1eead30094543e544fab0bae3d412f212
+NEXT_PUBLIC_TRIGGER_ORDER_MANAGER_ADDRESS=0x6ca42a07fb4bf7ff5125a971a188a47670ed4b45
+NEXT_PUBLIC_COLLATERAL_ADDRESS=0x8f3e02f6ae47ec0e5ff5dcd4dd1bfbd3c1fed2f0
+NEXT_PUBLIC_MARKET_LENS_ADDRESS=0xbbb2b1585f6b5ea0fe0c2e587a6f8b386eb60c97
+
+NEXT_PUBLIC_DEMO_MARKET_ADDRESS=0x2D2EE857198874e89Db2Cf29C3E1B47Bfb184cEa
+NEXT_PUBLIC_DEMO_MARKET_ID=0x0086bac6568bb3c77286c04f30a345f6cebca92a5619ec091faeda64e9079f82
+NEXT_PUBLIC_DEMO_BASE_TOKEN=0xf07a6d0b9453941c68dffebf181d556def09a8bf
+NEXT_PUBLIC_DEMO_ORACLE_ROUTE_ID=0x14deb0349513e213518bd0247addd8e42d964ef2a7e19388719fbcf52ecbed73
+NEXT_PUBLIC_DEMO_LIQUIDITY_VAULT=0xa6026956fA4c20C7C4A04da076fA0d38dac21407
+NEXT_PUBLIC_DEMO_INSURANCE_FUND=0x391dFF40D80de2E3093DBDb3e022F1811F86b687
+NEXT_PUBLIC_LAUNCH_HELPER_ADDRESS=0xaec57bd44a14302c9d157f1ba14c0b664f00209c
+
+# Server-only (API / indexer / keepers — never NEXT_PUBLIC_):
+# DATABASE_URL=...
+# REDIS_URL=...
+# KEEPER_PRIVATE_KEY=...   # NOT deployer; low-balance test ETH only
+# MARKET_FACTORY_ADDRESS=0xd1e154498a382074cf66f3274244d55b80b1a52d
+# MARKET_REGISTRY_ADDRESS=0xbdd1ab0bf5ea2846e05d80771958332f328e6da3
+# ORACLE_ROUTER_ADDRESS=0xd9e74c0ebdfbb9538b63fe5d7e4456456ef4a13b
+# LIQUIDATION_ENGINE_ADDRESS=0x381c70f1eead30094543e544fab0bae3d412f212
+# TRIGGER_ORDER_MANAGER_ADDRESS=0x6ca42a07fb4bf7ff5125a971a188a47670ed4b45
+# INDEXED_CONTRACT_ADDRESSES=<factory>,<registry>,<oracle>
+# CORS_ORIGINS=https://anyperp.fun,http://localhost:3000
+# HOST=0.0.0.0
+# PORT=4000
+# Apply DB: node scripts/migrate-all.mjs  (001 + 002 projections)
+# DexScreener + Pyth (API host)
+# DEXSCREENER_BASE_URL=https://api.dexscreener.com
+# DEXSCREENER_DEFAULT_CHAIN=robinhood
+# PYTH_HERMES_URL=https://hermes.pyth.network
+# PYTH_API_KEY=
+# PYTH_DEFAULT_FEED_IDS=BTC,ETH,SOL
+# NEXT_PUBLIC_API_URL=https://anyperp-stack-production.up.railway.app
+# NEXT_PUBLIC_WS_URL=wss://anyperp-stack-production.up.railway.app/ws
+#
+# Railway project: anyperp (anyperp-stack = API+indexer+keepers, Redis service)
+# Neon DATABASE_URL for projections; see ops/TESTNET_HOST.md
+#
+# GMGN (swap/route API only — header x-route-key). Not used for OHLCV charts.
+# Docs: https://docs.gmgn.ai — charts use DexScreener mainnet price/MC windows.
+# GMGN_ROUTE_KEY=
+# GMGN_API_KEY=

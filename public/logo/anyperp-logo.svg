@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none" role="img" aria-label="AnyPerp">
+  <!-- Transparent mark: three bars only, no background block -->
+  <g transform="translate(400 400)">
+    <rect x="-132" y="28" width="72" height="164" rx="18" fill="#00C805"/>
+    <rect x="-36" y="-192" width="72" height="384" rx="18" fill="#FF5000"/>
+    <rect x="60" y="-84" width="72" height="276" rx="18" fill="#009604"/>
+  </g>
+</svg>

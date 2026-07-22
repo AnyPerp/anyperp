@@ -1,0 +1,55 @@
+{
+  "env": "mainnet",
+  "project": "AnyPerp",
+  "release": "pending-mainnet",
+  "chain": {
+    "id": 0,
+    "name": "Robinhood Chain Mainnet (placeholder)",
+    "shortName": "RHC Mainnet",
+    "nativeCurrency": { "name": "Ether", "symbol": "ETH", "decimals": 18 },
+    "rpcHttp": "",
+    "rpcWs": "",
+    "explorer": "",
+    "faucet": null,
+    "testnet": false
+  },
+  "features": {
+    "allowMockOracle": false,
+    "allowMintableCollateral": false,
+    "publicFaucet": false,
+    "deployMockCollateral": false,
+    "requireTimelockGovernance": true,
+    "requireMultisigProposer": true,
+    "minTimelockDelaySeconds": 86400
+  },
+  "gates": {
+    "requireMainnetReadyFlag": true,
+    "requireAuditAttestation": true,
+    "blockMockOnMainnet": true,
+    "blockMintableCollateral": true
+  },
+  "deploy": {
+    "allowedChainIds": [],
+    "minDeployerEth": "0.05",
+    "statusLabel": "mainnet_candidate"
+  },
+  "site": {
+    "url": "https://anyperp.fun",
+    "docsPath": "/?surface=docs",
+    "appPath": "/?surface=app"
+  },
+  "placeholders": {
+    "CHAIN_ID": "Fill when Robinhood mainnet chain id is public",
+    "RPC_HTTP_URL": "Production RPC URL",
+    "COLLATERAL_ADDRESS": "Real USDC/USDG (no public mint)",
+    "CHAINLINK_*": "Verified feeds only",
+    "GOVERNANCE_*": "Production multisig + timelock",
+    "MAINNET_READY": "Set true only after audit + ops checklist",
+    "AUDIT_ATTESTATION": "Hash or URL of signed audit report"
+  },
+  "notes": [
+    "Do not deploy until chain id, RPC, collateral, and oracles are filled.",
+    "pnpm launch --env mainnet --require-gates will refuse incomplete config.",
+    "Testnet → mainnet should be the same scripts + this file, not a rewrite."
+  ]
+}

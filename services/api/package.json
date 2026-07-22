@@ -1,0 +1,6 @@
+{
+  "name": "@anyperp/api",
+  "version": "0.1.0-testnet",
+  "private": true,
+  "type": "module"
+}

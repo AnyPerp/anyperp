@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none" role="img" aria-label="AnyPerp AP mark">
+  <rect width="800" height="800" fill="#F4F7F4"/>
+  <path d="M200 600 L360 180 L420 180 L300 600 Z" fill="#00C805"/>
+  <path d="M380 180 L440 180 L600 600 L480 600 Z" fill="#FF5000"/>
+  <rect x="268" y="400" width="264" height="56" rx="12" fill="#009604"/>
+</svg>

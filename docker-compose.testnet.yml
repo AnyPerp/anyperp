@@ -1,0 +1,19 @@
+# Optional overrides for longer-running local testnet stack.
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.testnet.yml up -d
+#
+# Set strong secrets in a real host — defaults remain local-dev only.
+# Apply schema: DATABASE_URL=... node scripts/migrate-all.mjs
+
+services:
+  postgres:
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-anyperp}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-anyperp}
+      POSTGRES_DB: ${POSTGRES_DB:-anyperp}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+
+  redis:
+    ports:
+      - "${REDIS_PORT:-6379}:6379"

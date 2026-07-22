@@ -1,0 +1,301 @@
+{
+  "address": "0xaec57bd44a14302c9d157f1ba14c0b664f00209c",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "launcher",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "market",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "marketId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "baseToken",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sourceHint",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "symbol",
+          "type": "string"
+        }
+      ],
+      "name": "MarketLaunched",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "factory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "collateral",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "oracleRouter",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "adapters",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address",
+          "name": "baseToken",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "deployMirror",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "sourceHint",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "initialMarginBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maintenanceMarginBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxOpenInterestWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSkewWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxPositionWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxUtilizationBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxPriceImpactBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tradingFeeBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "liquidationPenaltyBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minSeedLiquidityWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minInsuranceWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minOracleLiquidityWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minOracleHistory",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxOracleConfidenceBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxOracleDeviationBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "oracleMaxAge",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "minOracleSources",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minCreatorBondWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "baseSpreadBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "longPayoutStressBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortPayoutStressBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fundingVelocityWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxFundingRatePerSecondWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxFundingAccrualSeconds",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Types.RiskParams",
+          "name": "risk",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint8",
+          "name": "tier",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "creatorBond",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lpAssets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "insuranceAssets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "userSalt",
+          "type": "bytes32"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "priceWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "confidenceBps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "updatedAt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "liquidityWad",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "historySeconds",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "validSources",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Types.PriceData",
+          "name": "price",
+          "type": "tuple"
+        }
+      ],
+      "name": "launch",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "marketId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "market",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "usedBase",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}

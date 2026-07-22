@@ -1,0 +1,9 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.services"
+
+[deploy]
+startCommand = "pnpm exec tsx services/api/src/server.ts"
+healthcheckPath = "/health/live"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"

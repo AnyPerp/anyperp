@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "chainId": 46630,
+  "checkedAt": "2026-07-15T12:33:42.137Z",
+  "manifestPath": "deployments/46630-1784118286478.json",
+  "checks": [
+    {
+      "name": "OracleRouter",
+      "address": "0xa3cd70efbef7e31e41d1d21e0a4787c07b7d653e",
+      "blockNumber": "90458107",
+      "codeBytes": 6391,
+      "codeHash": "0x6e7ebbb6bd9834d389d37839d9183e7da16b56087a291c6206f323d30e4d5c34",
+      "passed": true
+    },
+    {
+      "name": "RiskManager",
+      "address": "0xb9f7542abcca3877127323f18713b005d1981206",
+      "blockNumber": "90458110",
+      "codeBytes": 4700,
+      "codeHash": "0x0566f67042b0f273e5abd2d7580f50399624f83b5377862bddab238aedb0fe07",
+      "passed": true
+    },
+    {
+      "name": "FundingEngine",
+      "address": "0x5eed437c3f8f80430998e33d3477a2d3d02b4263",
+      "blockNumber": "90458115",
+      "codeBytes": 769,
+      "codeHash": "0xa9d3c8903c87d1c4292677bc745a35879a3dcdc83b7174f4fb0820daf873272b",
+      "passed": true
+    },
+    {
+      "name": "FeeManager",
+      "address": "0xd59e580e878e6bf3b277ba4563f3c76d09d6d532",
+      "blockNumber": "90458124",
+      "codeBytes": 794,
+      "codeHash": "0xdc53344ac5f8a5d5f06369ffe034f8bceab4937e6c9f3cdb7f4508ecb959708b",
+      "passed": true
+    },
+    {
+      "name": "LiquidationEngine",
+      "address": "0xe82c7fefb076773e1be16bff20b1306de53ebd99",
+      "blockNumber": "90458129",
+      "codeBytes": 521,
+      "codeHash": "0x28e57e2a173b5afbebedb136901455c1ce5d2a621995c6f01d936b7fc49c22e5",
+      "passed": true
+    },
+    {
+      "name": "TriggerOrderManager",
+      "address": "0x32af7101f1a571540425b42da4fda8d17c2ae0db",
+      "blockNumber": "90458135",
+      "codeBytes": 3018,
+      "codeHash": "0xb0723646234a5657dc9c145b057f0b8426e87d8f947e925cbfe5d74833693310",
+      "passed": true
+    },
+    {
+      "name": "KeeperRegistry",
+      "address": "0x19b4231c8f2230a3e604b4819bf2edee52c39182",
+      "blockNumber": "90458141",
+      "codeBytes": 1798,
+      "codeHash": "0xa651ac8797c80c79d763c3285da5612d18f1d00d3a2ba793914918a184ee0aeb",
+      "passed": true
+    },
+    {
+      "name": "MarketRegistry",
+      "address": "0x339a563dce291926a9c6f7a4ec5ed9b114145449",
+      "blockNumber": "90458149",
+      "codeBytes": 1653,
+      "codeHash": "0xb02068e915142a3a828109ce4325a888ba22471ec69d9917a2b11607a584310b",
+      "passed": true
+    },
+    {
+      "name": "EmergencyGuardian",
+      "address": "0xc05d79fe582efa22aafe1b87b9300847095dca51",
+      "blockNumber": "90458153",
+      "codeBytes": 916,
+      "codeHash": "0xffe44e9d12d0877a424b9c6c6a039b87b64e07a1707ae0576d3c11de6f825647",
+      "passed": true
+    },
+    {
+      "name": "MockCollateral",
+      "address": "0xdc75678dc5c1fa44d32ebaad99dfc1daa4205e08",
+      "blockNumber": "90458159",
+      "codeBytes": 2207,
+      "codeHash": "0x7f69c27e71f02df53341ebfe4a1ef65f141b289cd401064edc3209847affeeab",
+      "passed": true
+    },
+    {
+      "name": "MarketFactory",
+      "address": "0x48dca0e948cb201abc84cd56e9bcf9389a1de977",
+      "blockNumber": "90458164",
+      "codeBytes": 41992,
+      "codeHash": "0xf02be4be2c8f30e47745b5ea99119effd7c9c1bf4e7d4f15d7cf864bd32daa06",
+      "passed": true
+    }
+  ],
+  "wiring": {
+    "registryFactoryMatches": true,
+    "governanceMatches": true,
+    "guardianMatches": true,
+    "mockCollateralSupported": true
+  },
+  "remainingBalanceWei": "14842403840000000"
+}
