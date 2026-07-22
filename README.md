@@ -1,12 +1,12 @@
-﻿<p align="center">
-  <img src="public/github/github-og-light.png" alt="AnyPerp â€” Any token. A perp. Today." width="100%" />
+<p align="center">
+  <img src="public/github/github-og-light.png" alt="AnyPerp - Any token. A perp. Today." width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://anyperp.fun">Website</a> Â·
-  <a href="https://anyperp.fun/?surface=app">App</a> Â·
-  <a href="https://anyperp.fun/?surface=docs">Docs</a> Â·
-  <a href="https://x.com/tradeanyperp">X</a> Â·
+  <a href="https://anyperp.fun">Website</a> ·
+  <a href="https://anyperp.fun/?surface=app">App</a> ·
+  <a href="https://anyperp.fun/?surface=docs">Docs</a> ·
+  <a href="https://x.com/tradeanyperp">X</a> ·
   <a href="https://github.com/AnyPerp">Org</a>
 </p>
 
@@ -158,9 +158,9 @@ pnpm dev
 
 Required secrets (local only):
 
-- `DEPLOYER_PRIVATE_KEY` â€” fresh testnet key
-- `KEEPER_PRIVATE_KEY` â€” separate low-balance keeper
-- `DATABASE_URL` / `REDIS_URL` â€” local or your own managed services
+- `DEPLOYER_PRIVATE_KEY` - fresh testnet key
+- `KEEPER_PRIVATE_KEY` - separate low-balance keeper
+- `DATABASE_URL` / `REDIS_URL` - local or your own managed services
 
 Never reuse keys that have been shared in chat or committed anywhere.
 
@@ -179,9 +179,9 @@ Feature flags (`NEXT_PUBLIC_PUBLIC_FAUCET`, mock oracle, mintable collateral) ar
 
 One deployable frontend with three surfaces:
 
-- `anyperp.fun` â€” public landing
-- docs surface â€” `?surface=docs`
-- app surface â€” `?surface=app`
+- `anyperp.fun` - public landing
+- docs surface - `?surface=docs`
+- app surface - `?surface=app`
 
 Set `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_DOCS_URL`, and `NEXT_PUBLIC_APP_URL` for your host.
 
@@ -200,5 +200,5 @@ GitHub Actions workflow (`.github/workflows/ci.yml`) runs install, contract comp
 
 ## License
 
-[MIT](./LICENSE) â€” Copyright (c) 2026 AnyPerp contributors.
+[MIT](./LICENSE) - Copyright (c) 2026 AnyPerp contributors.
 
