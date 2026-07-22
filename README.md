@@ -108,6 +108,24 @@ Open-source engineering surface for the AnyPerp testnet stack:
 
 Internal product docs, marketing plans, admin tooling, host credentials, and media production assets are **not** published in this repository.
 
+## Contributors
+
+GitHub-style credits for people shipping AnyPerp. Avatars link to their GitHub profiles.
+
+<table>
+  <tr>
+    <td align="center" width="120">
+      <a href="https://github.com/tradeanyperp">
+        <img src="https://github.com/tradeanyperp.png?size=100" width="64" height="64" alt="tradeanyperp" style="border-radius:50%" /><br />
+        <b>tradeanyperp</b>
+      </a>
+      <br /><sub>Protocol · product</sub>
+    </td>
+  </tr>
+</table>
+
+> **Note:** The native GitHub **Contributors** graph (right sidebar) only lists accounts that have **committed code** to this repo. To appear there, open a PR / push as that GitHub user. The table above is the curated project credits list (add more rows anytime).
+
 ## Security status
 
 Compilation and included tests are engineering checks, **not** an audit. Real-funds use is blocked until real oracles, economic safety proofs, independent audits, legal review, and operational readiness.
