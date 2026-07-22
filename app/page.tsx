@@ -33,7 +33,7 @@ import {
   type Address,
 } from "viem";
 import { marketFactoryAbi, resolveAppChain, resolveFeatureFlags } from "../packages/sdk/src/index";
-import { DocsPortal, WHITEPAPER_PATH } from "./docs-portal";
+import { DocsPortal, WHITEPAPER_PATH, GITHUB_REPO_URL, GITHUB_ORG_URL } from "./docs-portal";
 
 type ListedMarket = {
   symbol: string;
@@ -931,6 +931,7 @@ export default function Home() {
           <a href="#risk">Risk</a>
           <a href="#contracts">Contracts</a>
           <a href="#api">API</a>
+          <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="footer-github">GitHub ↗</a>
         </nav> : <nav className="desktop-nav app-primary-nav" aria-label="Primary navigation">
           <button type="button" className={view === "markets" ? "nav-active" : ""} onClick={() => go("markets")}>Markets</button>
           <button type="button" className={view === "trade" ? "nav-active" : ""} onClick={() => go("trade")}>Trade</button>
@@ -1232,7 +1233,8 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
         <button type="button" onClick={onLaunch}>App</button>
         <button type="button" onClick={onRisk}>Risk</button>
         <a href="https://x.com/tradeanyperp" target="_blank" rel="noreferrer">X</a>
-        <a href="https://github.com/AnyPerp/anyperp" target="_blank" rel="noreferrer">GitHub</a>
+        <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="footer-github">GitHub</a>
+        <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer">Org</a>
         {factory && isAddress(factory) && (
           <a href={`${explorerBase}/address/${factory}`} target="_blank" rel="noreferrer">Explorer ↗</a>
         )}

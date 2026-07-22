@@ -23,6 +23,8 @@ const EXPLORER = "https://explorer.testnet.chain.robinhood.com/address/";
 /** Static PDF in public/ (anyperp- prefix is allowed by Vercel SPA rewrite). */
 export const WHITEPAPER_PATH = "/anyperp-whitepaper-v0.1.pdf";
 const WHITEPAPER_TITLE = "AnyPerp Technical Whitepaper v0.1.0-testnet";
+export const GITHUB_REPO_URL = "https://github.com/AnyPerp/anyperp";
+export const GITHUB_ORG_URL = "https://github.com/AnyPerp";
 
 function AddressRow({ label, address, note }: { label: string; address: string; note: string }) {
   const [copied, setCopied] = useState(false);
@@ -231,7 +233,8 @@ GET  /v1/transactions/:hash`}</code></pre>
         <a href="https://docs.chain.link/" target="_blank" rel="noreferrer"><b>Chainlink docs</b><span>Feeds, metadata, sequencer uptime, safety</span></a>
         <a href="https://developers.uniswap.org/docs" target="_blank" rel="noreferrer"><b>Uniswap developer docs</b><span>Pools, oracle observations, integration</span></a>
         <a href="https://explorer.testnet.chain.robinhood.com" target="_blank" rel="noreferrer"><b>Robinhood testnet explorer</b><span>Bytecode, verified source, txs, events</span></a>
-        <a href="https://github.com/AnyPerp/anyperp" target="_blank" rel="noreferrer"><b>GitHub monorepo</b><span>Contracts, services, app, deployments</span></a>
+        <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer"><b>GitHub — anyperp</b><span>Open-source monorepo · contracts, services, app</span></a>
+        <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer"><b>GitHub — AnyPerp org</b><span>Organization profile and public repos</span></a>
       </div>
     </>
   },
@@ -255,12 +258,24 @@ export function DocsPortal({ onHome, onLaunch }: DocsPortalProps) {
         <div className="docs-sidebar-actions">
           <a href="#whitepaper">Whitepaper</a>
           <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download PDF</a>
+          <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">GitHub ↗</a>
           <button type="button" onClick={onHome}>Back home</button>
           <button type="button" onClick={onLaunch}>Open the app</button>
         </div>
       </aside>
       <article className="docs-article">
-        <header className="docs-hero"><p className="landing-eyebrow">AnyPerp docs · anyperp.fun</p><h1>Know the rules. Then trade them.</h1><p>Start simple. Go deeper when you need price feeds, risk rails, LP vaults, contracts, the whitepaper, or the API.</p><div><span>VERSION 0.1.0</span><span>TESTNET</span><span>WHITEPAPER</span><span>anyperp.fun</span></div></header>
+        <header className="docs-hero">
+          <p className="landing-eyebrow">AnyPerp docs · anyperp.fun</p>
+          <h1>Know the rules. Then trade them.</h1>
+          <p>Start simple. Go deeper when you need price feeds, risk rails, LP vaults, contracts, the whitepaper, or the API. Source is open on GitHub.</p>
+          <div>
+            <span>VERSION 0.1.0</span>
+            <span>TESTNET</span>
+            <span>WHITEPAPER</span>
+            <span>anyperp.fun</span>
+            <a className="docs-hero-github" href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </header>
         {visible.length ? visible.map((section) => <section className="docs-section" id={section.id} key={section.id}><div className="docs-section-head"><p>{section.group}</p><h2>{section.title}</h2><span>{section.summary}</span></div><div className="docs-body">{section.content}</div></section>) : <div className="docs-no-results"><strong>Nothing matches "{query}"</strong><p>Try oracle, risk, funding, contracts, or API.</p></div>}
       </article>
       <aside className="docs-rail">
@@ -273,6 +288,15 @@ export function DocsPortal({ onHome, onLaunch }: DocsPortalProps) {
           <div className="docs-rail-wp-actions">
             <a href="#whitepaper">Read here</a>
             <a href={WHITEPAPER_PATH} download="AnyPerp-Whitepaper-v0.1.pdf">Download</a>
+          </div>
+        </div>
+        <div className="docs-rail-card docs-rail-github">
+          <span>Open source</span>
+          <strong>AnyPerp on<br />GitHub</strong>
+          <small>MIT · contracts, services, app</small>
+          <div className="docs-rail-wp-actions">
+            <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">Repo ↗</a>
+            <a href={GITHUB_ORG_URL} target="_blank" rel="noreferrer">Org ↗</a>
           </div>
         </div>
         <div className="docs-rail-card"><span>Architecture</span><strong>Oracle-priced<br />isolated vaults</strong><small>Not a CLOB. Not a vAMM.</small></div>

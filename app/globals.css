@@ -198,12 +198,14 @@ button:focus-visible, input:focus-visible {
   transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
 }
 .desktop-nav a.nav-whitepaper,
-.landing-footer a.footer-whitepaper {
+.landing-footer a.footer-whitepaper,
+.landing-footer a.footer-github {
   color: var(--green-deep);
   font-weight: 700;
 }
 .desktop-nav a.nav-whitepaper:hover,
-.landing-footer a.footer-whitepaper:hover {
+.landing-footer a.footer-whitepaper:hover,
+.landing-footer a.footer-github:hover {
   color: var(--green);
 }
 .desktop-nav button:hover, .desktop-nav a:hover, .desktop-nav .nav-active {
