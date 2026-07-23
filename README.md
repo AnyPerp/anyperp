@@ -34,7 +34,7 @@ Unaudited testnet prototype for permissionless, isolated perpetual markets on Ro
 |-------|--------|
 | **Name** | AnyPerp |
 | **Ticker** | `$PERP` |
-| **CA** | [`0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049`](https://dexscreener.com/robinhood/0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049) |
+| **CA** | [`0x62cD...9049`](https://dexscreener.com/robinhood/0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049) |
 | **Chain** | Robinhood Mainnet |
 | **Allocation** | Team **5%** · Community **95%** |
 | **Investors** | No VC |

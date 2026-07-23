@@ -35,7 +35,7 @@ Permissionless, isolated perpetual markets on Robinhood Chain.
 |---|---|
 | **Name** | AnyPerp |
 | **Ticker** | `$PERP` |
-| **CA** | [`0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049`](https://dexscreener.com/robinhood/0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049) |
+| **CA** | [`0x62cD...9049`](https://dexscreener.com/robinhood/0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049) |
 | **Chain** | Robinhood Mainnet |
 | **Allocation** | Team 5% · Community 95% · **No VC** |
 | **Use case** | Community token for the AnyPerp ecosystem — testnet participation, product research, development updates, and community initiatives around isolated perpetual markets |

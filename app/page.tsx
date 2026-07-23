@@ -1250,9 +1250,9 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
             <dd>No VC · community first</dd>
           </div>
         </dl>
-        <div className="token-ca-full" aria-label="Full contract address">
-          <span>Full CA</span>
-          <code>{PERP_TOKEN.ca}</code>
+        <div className="token-ca-full" aria-label="Contract address">
+          <span>CA</span>
+          <code title={PERP_TOKEN.ca}>{short(PERP_TOKEN.ca)}</code>
         </div>
         <div className="token-allocation" aria-label="Supply allocation">
           <div className="token-allocation-bar">
@@ -1265,7 +1265,7 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
           </div>
         </div>
         <p className="token-disclaimer">
-          Official ${PERP_TOKEN.ticker} CA: <code>{PERP_TOKEN.ca}</code>. Always verify this address before buying or adding liquidity.
+          Official ${PERP_TOKEN.ticker} CA: <code title={PERP_TOKEN.ca}>{short(PERP_TOKEN.ca)}</code>. Use Copy for the full address; always verify before buying or adding liquidity.
           ${PERP_TOKEN.ticker} is a community token — not a claim on protocol ownership, revenue, or governance rights at this stage.
         </p>
       </div>
