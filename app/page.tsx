@@ -62,6 +62,16 @@ const networkMode = featureFlags.mode;
 type View = "landing" | "docs" | "home" | "markets" | "trade" | "create" | "liquidity" | "portfolio" | "history" | "contracts" | "governance" | "risk" | "admin";
 type TxState = "idle" | "checking" | "awaiting_signature" | "submitted" | "confirmed" | "failed";
 
+/** $PERP community token (Robinhood Mainnet) */
+const PERP_TOKEN = {
+  name: "AnyPerp",
+  ticker: "PERP",
+  ca: "0x62cD75f9EF66ecE43568Ee889C64a2FC46dd9049" as const,
+  chain: "Robinhood Mainnet",
+  teamPct: 5,
+  communityPct: 95,
+} as const;
+
 /** Official protocol contracts (RHC testnet S10a — see deployments/ANYPERP-LATEST.md) */
 const OFFICIAL_CONTRACTS: { name: string; role: string; address: string; mintable?: boolean }[] = [
   { name: "apUSD (test collateral)", role: "Mintable test USD · margin & LP", address: process.env.NEXT_PUBLIC_COLLATERAL_ADDRESS || "0x8f3e02f6ae47ec0e5ff5dcd4dd1bfbd3c1fed2f0", mintable: true },
@@ -915,6 +925,7 @@ export default function Home() {
           <a href="#how-it-works">How it works</a>
           <a href="#architecture">Architecture</a>
           <a href="#risk-boundaries">Risk</a>
+          <a href="#token" className="nav-token">Token</a>
           <a href="#deployment">Contracts</a>
           <button type="button" onClick={() => openSurface("docs")}>Docs</button>
           <a
@@ -1167,6 +1178,99 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
       <div className="risk-boundary-grid"><article><strong>Stale price feed</strong><p>No new positions. You can still reduce risk when a safe price is available.</p></article><article><strong>Thin spot liquidity</strong><p>Exposure shrinks. The market can flip to reduce-only until depth returns.</p></article><article><strong>Vault maxed out</strong><p>Trades and withdrawals that make imbalance worse get blocked.</p></article><article><strong>Position underwater</strong><p>Your margin → this market&apos;s insurance → capped backstop → ADL.</p></article></div>
     </section>
 
+    <section className="landing-section token-section" id="token">
+      <div className="token-intro">
+        <p className="landing-eyebrow">${PERP_TOKEN.ticker} · live on mainnet</p>
+        <h2>AnyPerp token.<br />Built for the ecosystem.</h2>
+        <p className="token-usecase">
+          Community token for the AnyPerp ecosystem, supporting testnet participation, product research,
+          development updates, and community initiatives around isolated perpetual markets.
+        </p>
+        <div className="token-pills" aria-label="Token principles">
+          <span>No VC</span>
+          <span>{PERP_TOKEN.communityPct}% community</span>
+          <span>{PERP_TOKEN.teamPct}% team</span>
+          <span>{PERP_TOKEN.chain}</span>
+        </div>
+      </div>
+      <div className="token-card" aria-label="AnyPerp token details">
+        <div className="token-card-head">
+          <div className="token-mark" aria-hidden>
+            <Image src="/logo/anyperp-logo.svg" alt="" width={36} height={36} unoptimized />
+          </div>
+          <div>
+            <strong>{PERP_TOKEN.name}</strong>
+            <small>${PERP_TOKEN.ticker} community token</small>
+          </div>
+          <span className="token-status">LIVE</span>
+        </div>
+        <dl className="token-facts">
+          <div>
+            <dt>Name</dt>
+            <dd>{PERP_TOKEN.name}</dd>
+          </div>
+          <div>
+            <dt>Ticker</dt>
+            <dd><code>${PERP_TOKEN.ticker}</code></dd>
+          </div>
+          <div className="token-fact-ca">
+            <dt>Contract (CA)</dt>
+            <dd>
+              <code className="token-ca" title={PERP_TOKEN.ca}>{short(PERP_TOKEN.ca)}</code>
+              <button
+                type="button"
+                className="token-ca-copy"
+                onClick={() => {
+                  void navigator.clipboard?.writeText(PERP_TOKEN.ca);
+                }}
+                aria-label="Copy contract address"
+              >
+                Copy
+              </button>
+              <a
+                className="token-ca-link"
+                href={`https://dexscreener.com/robinhood/${PERP_TOKEN.ca}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                DexScreener ↗
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt>Chain</dt>
+            <dd>{PERP_TOKEN.chain}</dd>
+          </div>
+          <div>
+            <dt>Allocation</dt>
+            <dd>Team {PERP_TOKEN.teamPct}% · Community {PERP_TOKEN.communityPct}%</dd>
+          </div>
+          <div>
+            <dt>Investors</dt>
+            <dd>No VC · community first</dd>
+          </div>
+        </dl>
+        <div className="token-ca-full" aria-label="Contract address">
+          <span>CA</span>
+          <code title={PERP_TOKEN.ca}>{short(PERP_TOKEN.ca)}</code>
+        </div>
+        <div className="token-allocation" aria-label="Supply allocation">
+          <div className="token-allocation-bar">
+            <span className="token-alloc-community" style={{ width: `${PERP_TOKEN.communityPct}%` }} title={`Community ${PERP_TOKEN.communityPct}%`} />
+            <span className="token-alloc-team" style={{ width: `${PERP_TOKEN.teamPct}%` }} title={`Team ${PERP_TOKEN.teamPct}%`} />
+          </div>
+          <div className="token-allocation-legend">
+            <span><i className="swatch community" /> Community {PERP_TOKEN.communityPct}%</span>
+            <span><i className="swatch team" /> Team {PERP_TOKEN.teamPct}%</span>
+          </div>
+        </div>
+        <p className="token-disclaimer">
+          Official ${PERP_TOKEN.ticker} CA: <code title={PERP_TOKEN.ca}>{short(PERP_TOKEN.ca)}</code>. Use Copy for the full address; always verify before buying or adding liquidity.
+          ${PERP_TOKEN.ticker} is a community token — not a claim on protocol ownership, revenue, or governance rights at this stage.
+        </p>
+      </div>
+    </section>
+
     <section className="landing-section deployment-section" id="deployment">
       <div>
         <p className="landing-eyebrow">{networkMode === "mainnet" ? "Mainnet" : "Testnet, not mainnet"}</p>
@@ -1230,6 +1334,7 @@ function Landing({ onLaunch, onCreate, onRisk, onDocs }: { onLaunch(): void; onC
         >
           Whitepaper
         </a>
+        <a href="#token" className="footer-token">Token</a>
         <button type="button" onClick={onLaunch}>App</button>
         <button type="button" onClick={onRisk}>Risk</button>
         <a href="https://x.com/tradeanyperp" target="_blank" rel="noreferrer">X</a>

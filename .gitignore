@@ -89,3 +89,6 @@ next-env.d.ts
 .vscode/
 *.swp
 *~
+
+.vercel
+.env*
